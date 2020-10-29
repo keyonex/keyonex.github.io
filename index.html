@@ -1,2207 +1,2215 @@
 
-<!DOCTYPE html>
+<!-- <!DOCTYPE html> -->
 
-<html>
-<head>
-	<base href="#"/>
-	<title>Коля Резниченко лох</title>
+<!-- <html> -->
+<!-- <head> -->
+	<!-- <base href="#"/> -->
+	<!-- <title>Коля Резниченко лох</title> -->
 	
 	
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<meta name="description" content="Волшебный склад сокровищ и интернет-магазин самых лучших картонных игрушек и декораций, которые папа Женя начал изобретать для дочки Иришки, а теперь придумывает их для всех детей во Вселенной!" />
-	<meta name="keywords"    content="Все товары" />
-	<meta name="viewport" content="width=1024"/>
+	<!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /> -->
+	<!-- <meta name="description" content="Волшебный склад сокровищ и интернет-магазин самых лучших картонных игрушек и декораций, которые папа Женя начал изобретать для дочки Иришки, а теперь придумывает их для всех детей во Вселенной!" /> -->
+	<!-- <meta name="keywords"    content="Все товары" /> -->
+	<!-- <meta name="viewport" content="width=1024"/> -->
 	
 	
-	<link href="design/default/css/styles.css" rel="stylesheet" type="text/css" media="screen"/>
-	<link href="design/default/images/favicon.ico" rel="icon"          type="image/x-icon"/>
-	<link href="design/default/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-<link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
-<!-- Список товаров-->
+	<!-- <link href="design/default/css/styles.css" rel="stylesheet" type="text/css" media="screen"/> -->
+	<!-- <link href="design/default/images/favicon.ico" rel="icon"          type="image/x-icon"/> -->
+	<!-- <link href="design/default/images/favicon.ico" rel="shortcut icon" type="image/x-icon"/> -->
+<!-- <link href='http://fonts.googleapis.com/css?family=Open+Sans:400,400italic,600,700&subset=latin,cyrillic' rel='stylesheet' type='text/css'> -->
+<!-- <!-- Список товаров--> -->
 
-	<meta property="og:url" content="http://cartonpapa.com/products"/>  
-	<meta property="og:title" content="Коля Резниченко лох" />  
-		<meta property="og:image" content="http://cartonpapa.com/sharing.jpg" />
-	<link rel="image_src" href="http://cartonpapa.com/sharing.jpg" />
-	<meta property="og:description" content="Волшебный склад сокровищ и интернет-магазин самых лучших картонных игрушек и декораций, которые папа Женя начал изобретать для дочки Иришки, а теперь придумывает их для всех детей во Вселенной!" />  
-	<meta property="og:type" content="article" />  
+	<!-- <meta property="og:url" content="http://cartonpapa.com/products"/>   -->
+	<!-- <meta property="og:title" content="Коля Резниченко лох" />   -->
+		<!-- <meta property="og:image" content="http://cartonpapa.com/sharing.jpg" /> -->
+	<!-- <link rel="image_src" href="http://cartonpapa.com/sharing.jpg" /> -->
+	<!-- <meta property="og:description" content="Волшебный склад сокровищ и интернет-магазин самых лучших картонных игрушек и декораций, которые папа Женя начал изобретать для дочки Иришки, а теперь придумывает их для всех детей во Вселенной!" />   -->
+	<!-- <meta property="og:type" content="article" />   -->
 
 
 	
-	<script type="text/javascript" src="design/default/js/jquery-1.8.3.min.js"></script>
-	<script type="text/javascript" src="design/default/js/jquery.main.js"></script>
+	<!-- <script type="text/javascript" src="design/default/js/jquery-1.8.3.min.js"></script> -->
+	<!-- <script type="text/javascript" src="design/default/js/jquery.main.js"></script> -->
 	
 	
 		
-	<link href="js/validetta.css" rel="stylesheet" type="text/css" media="screen" >
+	<!-- <link href="js/validetta.css" rel="stylesheet" type="text/css" media="screen" > -->
 	
-	<script type="text/javascript" src="js/ctrlnavigate.js"></script>           
-	
-	
-	<script src="design/default/js/jquery-ui.min.js"></script>
-	<script src="design/default/js/ajax_cart.js"></script>
-<script type="text/javascript" src="js/validetta.js"></script>	
-	
-	<!--[if lt IE 9]>
-		<html class="ie">
-		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]-->
+	<!-- <script type="text/javascript" src="js/ctrlnavigate.js"></script>            -->
 	
 	
+	<!-- <script src="design/default/js/jquery-ui.min.js"></script> -->
+	<!-- <script src="design/default/js/ajax_cart.js"></script> -->
+<!-- <script type="text/javascript" src="js/validetta.js"></script>	 -->
 	
-	<script src="js/autocomplete/jquery.autocomplete-min.js" type="text/javascript"></script>
-	<style>
-	.autocomplete-w1 { position:absolute; top:0px; left:0px; margin:6px 0 0 6px; /* IE6 fix: */ _background:none; _margin:1px 0 0 0; }
-	.autocomplete { border:1px solid #999; background:#FFF; cursor:default; text-align:left; overflow-x:auto;  overflow-y: auto; margin:-6px 6px 6px -6px; /* IE6 specific: */ _height:350px;  _margin:0; _overflow-x:hidden; }
-	.autocomplete .selected { background:#F0F0F0; }
-	.autocomplete div { padding:2px 5px; white-space:nowrap; }
-	.autocomplete strong { font-weight:normal; color:#3399FF; }
-	</style>	
-	<script>
-	$(function() {
-		//  Автозаполнитель поиска
-		$(".input_search").autocomplete({
-			serviceUrl:'ajax/search_products.php',
-			minChars:1,
-			noCache: false, 
-			onSelect:
-				function(value, data){
-					 $(".input_search").closest('form').submit();
-				},
-			fnFormatResult:
-				function(value, data, currentValue){
-					var reEscape = new RegExp('(\\' + ['/', '.', '*', '+', '?', '|', '(', ')', '[', ']', '{', '}', '\\'].join('|\\') + ')', 'g');
-					var pattern = '(' + currentValue.replace(reEscape, '\\$1') + ')';
-	  				return (data.image?"<img align=absmiddle src='"+data.image+"'> ":'') + value.replace(new RegExp(pattern, 'gi'), '<strong>$1<\/strong>');
-				}	
-		});
-	});
-	</script>
+	<!-- <!--[if lt IE 9]> -->
+		<!-- <html class="ie"> -->
+		<!-- <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script> -->
+	<!-- <![endif]--> -->
+	
+	
+	
+	<!-- <script src="js/autocomplete/jquery.autocomplete-min.js" type="text/javascript"></script> -->
+	<!-- <style> -->
+	<!-- .autocomplete-w1 { position:absolute; top:0px; left:0px; margin:6px 0 0 6px; /* IE6 fix: */ _background:none; _margin:1px 0 0 0; } -->
+	<!-- .autocomplete { border:1px solid #999; background:#FFF; cursor:default; text-align:left; overflow-x:auto;  overflow-y: auto; margin:-6px 6px 6px -6px; /* IE6 specific: */ _height:350px;  _margin:0; _overflow-x:hidden; } -->
+	<!-- .autocomplete .selected { background:#F0F0F0; } -->
+	<!-- .autocomplete div { padding:2px 5px; white-space:nowrap; } -->
+	<!-- .autocomplete strong { font-weight:normal; color:#3399FF; } -->
+	<!-- </style>	 -->
+	<!-- <script> -->
+	<!-- $(function() { -->
+		<!-- //  Автозаполнитель поиска -->
+		<!-- $(".input_search").autocomplete({ -->
+			<!-- serviceUrl:'ajax/search_products.php', -->
+			<!-- minChars:1, -->
+			<!-- noCache: false,  -->
+			<!-- onSelect: -->
+				<!-- function(value, data){ -->
+					 <!-- $(".input_search").closest('form').submit(); -->
+				<!-- }, -->
+			<!-- fnFormatResult: -->
+				<!-- function(value, data, currentValue){ -->
+					<!-- var reEscape = new RegExp('(\\' + ['/', '.', '*', '+', '?', '|', '(', ')', '[', ']', '{', '}', '\\'].join('|\\') + ')', 'g'); -->
+					<!-- var pattern = '(' + currentValue.replace(reEscape, '\\$1') + ')'; -->
+	  				<!-- return (data.image?"<img align=absmiddle src='"+data.image+"'> ":'') + value.replace(new RegExp(pattern, 'gi'), '<strong>$1<\/strong>'); -->
+				<!-- }	 -->
+		<!-- }); -->
+	<!-- }); -->
+	<!-- </script> -->
 	
 		
 			
-</head>
-<body>
-<div id="fb-root"></div>
-<script>(function(d, s, id) {
-  var js, fjs = d.getElementsByTagName(s)[0];
-  if (d.getElementById(id)) return;
-  js = d.createElement(s); js.id = id;
-  js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1&appId=1404073123137433";
-  fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
-	<div id="wrapper">
-		<div class="w1">
-		<strong class="logo" style="z-index: 1000;"><a href="/">Коля Резниченко</a></strong>	
-<header id="header">
+<!-- </head> -->
+<!-- <body> -->
+<!-- <div id="fb-root"></div> -->
+<!-- <script>(function(d, s, id) { -->
+  <!-- var js, fjs = d.getElementsByTagName(s)[0]; -->
+  <!-- if (d.getElementById(id)) return; -->
+  <!-- js = d.createElement(s); js.id = id; -->
+  <!-- js.src = "//connect.facebook.net/ru_RU/all.js#xfbml=1&appId=1404073123137433"; -->
+  <!-- fjs.parentNode.insertBefore(js, fjs); -->
+<!-- }(document, 'script', 'facebook-jssdk'));</script> -->
+	<!-- <div id="wrapper"> -->
+		<!-- <div class="w1"> -->
+		<!-- <strong class="logo" style="z-index: 1000;"><a href="/">Коля Резниченко</a></strong>	 -->
+<!-- <header id="header"> -->
 
-				<div class="slideshow">
-					<div class="slideset">
-						<div class="slide"><img src="http://cartonpapa.com/files/slides/img01.jpg" alt="image description"></div>
-					</div>
-				<div class="header-frame">
+				<!-- <div class="slideshow"> -->
+					<!-- <div class="slideset"> -->
+						<!-- <div class="slide"><img src="http://cartonpapa.com/files/slides/img01.jpg" alt="image description"></div> -->
+					<!-- </div> -->
+				<!-- <div class="header-frame"> -->
 				
-					<div class="header-block"  style="width:400px;">
-						<a href="dostavka" class="btn-red">доставка и оплата</a>
-						<a href="contact" class="btn-orange" style="margin-bottom:19px;">контакты</a>
-						<span class="btn-tel" style="margin-top:24px;">+7-495-106-07-17</span>
-					</div>
-					<div class="header-box">
-						<div class="person-box">
+					<!-- <div class="header-block"  style="width:400px;"> -->
+						<!-- <a href="dostavka" class="btn-red">доставка и оплата</a> -->
+						<!-- <a href="contact" class="btn-orange" style="margin-bottom:19px;">контакты</a> -->
+						<!-- <span class="btn-tel" style="margin-top:24px;">+7-495-106-07-17</span> -->
+					<!-- </div> -->
+					<!-- <div class="header-box"> -->
+						<!-- <div class="person-box"> -->
 						
-						<a href="#" class="btn-login">войти</a>
-												<div class="login-holder">
-							<h1>Войти на сайт</h1>
-							<div class="row-holder">
-								<div class="socialnetworks-login">
-									<p>Вы можете войти или зарегистрироваться с помощью социальных сетей:</p>
-		<!-- Ulogin -->
-	<script src="http://ulogin.ru/js/ulogin.js"></script>
-	<div id="uLogin" data-ulogin="display=buttons;fields=first_name,last_name,email;providers=facebook,vkontakte;redirect_uri=http://cartonpapa.com/user/login;receiver=http://cartonpapa.com/xd_custom.html">
-		<div class="login-facebook">
-	<img src="http://cartonpapa.com/design/default/images/bg-facebook.jpg" x-ulogin-button = "facebook"  width="170" height="26">
-									</div>
-	<div class="login-vk">
-	<img src="http://cartonpapa.com/design/default/images/bg-vk.jpg" x-ulogin-button = "vkontakte" width="170" height="26">
-									</div>
+						<!-- <a href="#" class="btn-login">войти</a> -->
+												<!-- <div class="login-holder"> -->
+							<!-- <h1>Войти на сайт</h1> -->
+							<!-- <div class="row-holder"> -->
+								<!-- <div class="socialnetworks-login"> -->
+									<!-- <p>Вы можете войти или зарегистрироваться с помощью социальных сетей:</p> -->
+		<!-- <!-- Ulogin --> -->
+	<!-- <script src="http://ulogin.ru/js/ulogin.js"></script> -->
+	<!-- <div id="uLogin" data-ulogin="display=buttons;fields=first_name,last_name,email;providers=facebook,vkontakte;redirect_uri=http://cartonpapa.com/user/login;receiver=http://cartonpapa.com/xd_custom.html"> -->
+		<!-- <div class="login-facebook"> -->
+	<!-- <img src="http://cartonpapa.com/design/default/images/bg-facebook.jpg" x-ulogin-button = "facebook"  width="170" height="26"> -->
+									<!-- </div> -->
+	<!-- <div class="login-vk"> -->
+	<!-- <img src="http://cartonpapa.com/design/default/images/bg-vk.jpg" x-ulogin-button = "vkontakte" width="170" height="26"> -->
+									<!-- </div> -->
 	
-	</div>
-	<!-- end -->
-								</div>
-								<form method="post" action="user/login" class="login-form">
-									<fieldset>
-										<input type="email" placeholder="E-mail" data-format="email" name="email" value="" >
-										<input name="password" data-format=".+" type="password" placeholder="Пароль">
-										<a href="user/password_remind">Напомнить пароль</a>
-										<input type="submit" name="login" value="войти">
-									</fieldset>
-								</form>
-							</div>
-							<div class="footer-form"><a href="user/register">Зарегистрироваться</a></div>
-						</div>
-											</div>
-					<a href="./cart?step=0" class="cart-box">корзина <span class="num-box" style="color:#fff;">0</span></a>
+	<!-- </div> -->
+	<!-- <!-- end --> -->
+								<!-- </div> -->
+								<!-- <form method="post" action="user/login" class="login-form"> -->
+									<!-- <fieldset> -->
+										<!-- <input type="email" placeholder="E-mail" data-format="email" name="email" value="" > -->
+										<!-- <input name="password" data-format=".+" type="password" placeholder="Пароль"> -->
+										<!-- <a href="user/password_remind">Напомнить пароль</a> -->
+										<!-- <input type="submit" name="login" value="войти"> -->
+									<!-- </fieldset> -->
+								<!-- </form> -->
+							<!-- </div> -->
+							<!-- <div class="footer-form"><a href="user/register">Зарегистрироваться</a></div> -->
+						<!-- </div> -->
+											<!-- </div> -->
+					<!-- <a href="./cart?step=0" class="cart-box">корзина <span class="num-box" style="color:#fff;">0</span></a> -->
 
-					</div>
-				</div>
-				<nav class="product-nav">
-					<ul>
-						<li  ><a href="about">Коля Резниченко лох</a></li>
-						<li class="active" ><a href="products">Магазин игрушек</a></li>
-						<li  ><a href="blog">Картонки на заказ</a></li>
-					</ul>
-				</nav>
+					<!-- </div> -->
+				<!-- </div> -->
+				<!-- <nav class="product-nav"> -->
+					<!-- <ul> -->
+						<!-- <li  ><a href="about">Коля Резниченко лох</a></li> -->
+						<!-- <li class="active" ><a href="products">Магазин игрушек</a></li> -->
+						<!-- <li  ><a href="blog">Картонки на заказ</a></li> -->
+					<!-- </ul> -->
+				<!-- </nav> -->
 				
-					<a class="btn-prev" href="#">Previous</a>
-					<a class="btn-next" href="#">Next</a>
-				</div>
-			</header>
-		<!-- Основная часть --> 
-		<div id="content">
+					<!-- <a class="btn-prev" href="#">Previous</a> -->
+					<!-- <a class="btn-next" href="#">Next</a> -->
+				<!-- </div> -->
+			<!-- </header> -->
+		<!-- <!-- Основная часть -->  -->
+		<!-- <div id="content"> -->
 			
-<div class="container products-holder">
+<!-- <div class="container products-holder"> -->
 
-	<ul class="navigation">
+	<!-- <ul class="navigation"> -->
 
-		<li class="item5 show-all"><a class="active" href="/products"  rel="item5">Все</a></li>
-					<li class="item24"><a  href="/catalog/novyj-god-" rel="item24">Новый год </a></li>
-					<li class="item37"><a  href="/catalog/skidki-po-aktsii" rel="item37">Скидки по акции</a></li>
-					<li class="item25"><a  href="/catalog/novinki" rel="item25">Новинки</a></li>
-					<li class="item38"><a  href="/catalog/fotodekor" rel="item38">ФотоДекор</a></li>
-					<li class="item27"><a  href="/catalog/kartonnye-domiki" rel="item27">Картонные домики</a></li>
-					<li class="item7"><a  href="/catalog/bolshie-igrushki" rel="item7">Большие игрушки</a></li>
-					<li class="item16"><a  href="/catalog/razvivayuschie-igrushki" rel="item16">Развивающие игрушки</a></li>
-					<li class="item18"><a  href="/catalog/aktivnye-igry" rel="item18">Активные игры</a></li>
-					<li class="item12"><a  href="/catalog/tovary-dlya-tvorchestva" rel="item12">Товары для творчества</a></li>
-					<li class="item15"><a  href="/catalog/mebel-iz-kartona" rel="item15">Мебель из картона</a></li>
-					<li class="item23"><a  href="/catalog/dekoratsii-dlya-prazdnikov" rel="item23">Декорации для праздников</a></li>
-					<li class="item28"><a  href="/catalog/detskie-ploschadki" rel="item28">Детские площадки</a></li>
-					<li class="item33"><a  href="/catalog/23-fevralya" rel="item33">23 февраля</a></li>
-					<li class="item34"><a  href="/catalog/8-marta" rel="item34">8 марта</a></li>
-					<li class="item35"><a  href="/catalog/12-aprelya" rel="item35">12 апреля</a></li>
-					<li class="item36"><a  href="/catalog/9-maya" rel="item36">9 мая</a></li>
-			</ul>
+		<!-- <li class="item5 show-all"><a class="active" href="/products"  rel="item5">Все</a></li> -->
+					<!-- <li class="item24"><a  href="/catalog/novyj-god-" rel="item24">Новый год </a></li> -->
+					<!-- <li class="item37"><a  href="/catalog/skidki-po-aktsii" rel="item37">Скидки по акции</a></li> -->
+					<!-- <li class="item25"><a  href="/catalog/novinki" rel="item25">Новинки</a></li> -->
+					<!-- <li class="item38"><a  href="/catalog/fotodekor" rel="item38">ФотоДекор</a></li> -->
+					<!-- <li class="item27"><a  href="/catalog/kartonnye-domiki" rel="item27">Картонные домики</a></li> -->
+					<!-- <li class="item7"><a  href="/catalog/bolshie-igrushki" rel="item7">Большие игрушки</a></li> -->
+					<!-- <li class="item16"><a  href="/catalog/razvivayuschie-igrushki" rel="item16">Развивающие игрушки</a></li> -->
+					<!-- <li class="item18"><a  href="/catalog/aktivnye-igry" rel="item18">Активные игры</a></li> -->
+					<!-- <li class="item12"><a  href="/catalog/tovary-dlya-tvorchestva" rel="item12">Товары для творчества</a></li> -->
+					<!-- <li class="item15"><a  href="/catalog/mebel-iz-kartona" rel="item15">Мебель из картона</a></li> -->
+					<!-- <li class="item23"><a  href="/catalog/dekoratsii-dlya-prazdnikov" rel="item23">Декорации для праздников</a></li> -->
+					<!-- <li class="item28"><a  href="/catalog/detskie-ploschadki" rel="item28">Детские площадки</a></li> -->
+					<!-- <li class="item33"><a  href="/catalog/23-fevralya" rel="item33">23 февраля</a></li> -->
+					<!-- <li class="item34"><a  href="/catalog/8-marta" rel="item34">8 марта</a></li> -->
+					<!-- <li class="item35"><a  href="/catalog/12-aprelya" rel="item35">12 апреля</a></li> -->
+					<!-- <li class="item36"><a  href="/catalog/9-maya" rel="item36">9 мая</a></li> -->
+			<!-- </ul> -->
 
-					<ul class="product-grids product-frame isotope">
+					<!-- <ul class="product-grids product-frame isotope"> -->
 
 
-							<li class="item7" title="item7">
-							<div class="heading">
-								<span class="title"><a data-product="63" href="products/raketa-na-mars-belaya">Ракета на Марс (белая)</a></span>
-								<span class="price">
+							<!-- <li class="item7" title="item7"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="63" href="products/raketa-na-mars-belaya">Ракета на Марс (белая)</a></span> -->
+								<!-- <span class="price"> -->
 			
-			 </span>
-							</div>
-														<a href="products/raketa-na-mars-belaya" title="Ракета на Марс (белая)" >
-								<img src="http://cartonpapa.com/files/products/DSC01464.290x192w.JPG?0ad80dde44eb5293821e5ab6213c4ab9"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/raketa-na-mars-belaya" title="Ракета на Марс (белая)" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/DSC01464.290x192w.JPG?0ad80dde44eb5293821e5ab6213c4ab9"  > -->
 								
-							</a>
-																				</li>
+							<!-- </a> -->
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item7" title="item7">
-							<div class="heading">
-								<span class="title"><a data-product="53" href="products/raketa-na-mars-kraft">Ракета на Марс (крафт)</a></span>
-								<span class="price">
+							<!-- <li class="item7" title="item7"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="53" href="products/raketa-na-mars-kraft">Ракета на Марс (крафт)</a></span> -->
+								<!-- <span class="price"> -->
 			
-									1 540 <span class="rouble">i</span>
+									<!-- 1 540 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/raketa-na-mars-kraft" title="Ракета на Марс (крафт)" >
-								<img src="http://cartonpapa.com/files/products/mars_06_big.290x192w.jpg?fd8bd3e32b144af6196e3896a5087c0f"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/raketa-na-mars-kraft" title="Ракета на Марс (крафт)" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/mars_06_big.290x192w.jpg?fd8bd3e32b144af6196e3896a5087c0f"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item35" title="item35">
-							<div class="heading">
-								<span class="title"><a data-product="239" href="products/shlem-kosmonavta">Шлем космонавта</a></span>
-								<span class="price">
+							<!-- <li class="item35" title="item35"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="239" href="products/shlem-kosmonavta">Шлем космонавта</a></span> -->
+								<!-- <span class="price"> -->
 			
-									385 <span class="rouble">i</span>
+									<!-- 385 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/shlem-kosmonavta" title="Шлем космонавта" >
-								<img src="http://cartonpapa.com/files/products/shlem2_sajt.290x192w.png?9b71fca141e9f43bf0ad8b4e18e14c84"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/shlem-kosmonavta" title="Шлем космонавта" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/shlem2_sajt.290x192w.png?9b71fca141e9f43bf0ad8b4e18e14c84"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item33" title="item33">
-							<div class="heading">
-								<span class="title"><a data-product="293" href="products/nabor-raketashlem">Набор Ракета+Шлем</a></span>
-								<span class="price">
+							<!-- <li class="item33" title="item33"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="293" href="products/nabor-raketashlem">Набор Ракета+Шлем</a></span> -->
+								<!-- <span class="price"> -->
 			
-									1 760 <span class="rouble">i</span>
+									<!-- 1 760 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/nabor-raketashlem" title="Набор Ракета+Шлем" >
-								<img src="http://cartonpapa.com/files/products/cartonpapa.com-raketa-na-mars-i-shlem-1.290x192w.jpg?b6b10c06ed63ddcf062dab324927a871"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/nabor-raketashlem" title="Набор Ракета+Шлем" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/cartonpapa.com-raketa-na-mars-i-shlem-1.290x192w.jpg?b6b10c06ed63ddcf062dab324927a871"  > -->
 																																																					
-							</a>
+							<!-- </a> -->
 														
-							<del class="old-price">1 850 <span class="rouble">i</span></del>													</li>
+							<!-- <del class="old-price">1 850 <span class="rouble">i</span></del>													</li> -->
 
 
 
 
 
-							<li class="item7" title="item7">
-							<div class="heading">
-								<span class="title"><a data-product="275" href="products/raketa-na-lunu">Ракета на Луну</a></span>
-								<span class="price">
+							<!-- <li class="item7" title="item7"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="275" href="products/raketa-na-lunu">Ракета на Луну</a></span> -->
+								<!-- <span class="price"> -->
 			
-			 </span>
-							</div>
-														<a href="products/raketa-na-lunu" title="Ракета на Луну" >
-								<img src="http://cartonpapa.com/files/products/cu8a7880--kopiya.290x192w.jpg?379f07a5d30c159c91c3654565276ec2"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/raketa-na-lunu" title="Ракета на Луну" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/cu8a7880--kopiya.290x192w.jpg?379f07a5d30c159c91c3654565276ec2"  > -->
 								
-							</a>
-																				</li>
+							<!-- </a> -->
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item7" title="item7">
-							<div class="heading">
-								<span class="title"><a data-product="251" href="products/kartonnyj-traktor">Картонный Трактор</a></span>
-								<span class="price">
+							<!-- <li class="item7" title="item7"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="251" href="products/kartonnyj-traktor">Картонный Трактор</a></span> -->
+								<!-- <span class="price"> -->
 			
-									2 200 <span class="rouble">i</span>
+									<!-- 2 200 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/kartonnyj-traktor" title="Картонный Трактор" >
-								<img src="http://cartonpapa.com/files/products/cartonpapa.com-traktor-8238.290x192w.jpg?bef5ff48050cb66ecfe28379cc752f92"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/kartonnyj-traktor" title="Картонный Трактор" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/cartonpapa.com-traktor-8238.290x192w.jpg?bef5ff48050cb66ecfe28379cc752f92"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item18" title="item18">
-							<div class="heading">
-								<span class="title"><a data-product="137" href="products/samolet-na-lyamkah">Самолет на лямках</a></span>
-								<span class="price">
+							<!-- <li class="item18" title="item18"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="137" href="products/samolet-na-lyamkah">Самолет на лямках</a></span> -->
+								<!-- <span class="price"> -->
 			
-									1 100 <span class="rouble">i</span>
+									<!-- 1 100 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/samolet-na-lyamkah" title="Самолет на лямках" >
-								<img src="http://cartonpapa.com/files/products/samolet-na-lyamkah-02.290x192w.jpg?fce535d794132b92e8c85965099b3f6b"  >
-																										<img class="label" src="files/ticket-best.png" alt="" width="68">																	
-							</a>
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/samolet-na-lyamkah" title="Самолет на лямках" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/samolet-na-lyamkah-02.290x192w.jpg?fce535d794132b92e8c85965099b3f6b"  > -->
+																										<!-- <img class="label" src="files/ticket-best.png" alt="" width="68">																	 -->
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item7" title="item7">
-							<div class="heading">
-								<span class="title"><a data-product="252" href="products/tank-kv-2">Танк КВ-2</a></span>
-								<span class="price">
+							<!-- <li class="item7" title="item7"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="252" href="products/tank-kv-2">Танк КВ-2</a></span> -->
+								<!-- <span class="price"> -->
 			
-			 </span>
-							</div>
-														<a href="products/tank-kv-2" title="Танк КВ-2" >
-								<img src="http://cartonpapa.com/files/products/tank2_sajt_1.290x192w.png?b0d30c7cb57e8eb5eeb008c3747a732c"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/tank-kv-2" title="Танк КВ-2" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/tank2_sajt_1.290x192w.png?b0d30c7cb57e8eb5eeb008c3747a732c"  > -->
 								
-							</a>
-																				</li>
+							<!-- </a> -->
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item36" title="item36">
-							<div class="heading">
-								<span class="title"><a data-product="291" href="products/shlem-tankista">Шлем танкиста</a></span>
-								<span class="price">
+							<!-- <li class="item36" title="item36"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="291" href="products/shlem-tankista">Шлем танкиста</a></span> -->
+								<!-- <span class="price"> -->
 			
-			 </span>
-							</div>
-														<a href="products/shlem-tankista" title="Шлем танкиста" >
-								<img src="http://cartonpapa.com/files/products/cartonpapa.com-shlem-tankinsta-01-800x532.290x192w.jpg?6336115c34bad6be3494eecb7cd94472"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/shlem-tankista" title="Шлем танкиста" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/cartonpapa.com-shlem-tankinsta-01-800x532.290x192w.jpg?6336115c34bad6be3494eecb7cd94472"  > -->
 								
-							</a>
-																				</li>
+							<!-- </a> -->
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item33" title="item33">
-							<div class="heading">
-								<span class="title"><a data-product="292" href="products/nabor-tank--shlem">Набор Танк + Шлем</a></span>
-								<span class="price">
+							<!-- <li class="item33" title="item33"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="292" href="products/nabor-tank--shlem">Набор Танк + Шлем</a></span> -->
+								<!-- <span class="price"> -->
 			
-			 </span>
-							</div>
-														<a href="products/nabor-tank--shlem" title="Набор Танк + Шлем" >
-								<img src="http://cartonpapa.com/files/products/tank1_sajt.290x192w.png?1efdc2e81b39b35542c57c29dd9f0346"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/nabor-tank--shlem" title="Набор Танк + Шлем" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/tank1_sajt.290x192w.png?1efdc2e81b39b35542c57c29dd9f0346"  > -->
 								
-							</a>
-																				</li>
+							<!-- </a> -->
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item18" title="item18">
-							<div class="heading">
-								<span class="title"><a data-product="279" href="products/ya---mobil-">Я - Мобиль </a></span>
-								<span class="price">
+							<!-- <li class="item18" title="item18"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="279" href="products/ya---mobil-">Я - Мобиль </a></span> -->
+								<!-- <span class="price"> -->
 			
-									880 <span class="rouble">i</span>
+									<!-- 880 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/ya---mobil-" title="Я - Мобиль " >
-								<img src="http://cartonpapa.com/files/products/dsc_5426.290x192w.jpg?69d46379d615ba6c7e4e4454aef16b61"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/ya---mobil-" title="Я - Мобиль " > -->
+								<!-- <img src="http://cartonpapa.com/files/products/dsc_5426.290x192w.jpg?69d46379d615ba6c7e4e4454aef16b61"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item7" title="item7">
-							<div class="heading">
-								<span class="title"><a data-product="223" href="products/mechta-pirata-belyj">Мечта пирата (белый)</a></span>
-								<span class="price">
+							<!-- <li class="item7" title="item7"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="223" href="products/mechta-pirata-belyj">Мечта пирата (белый)</a></span> -->
+								<!-- <span class="price"> -->
 			
-									1 980 <span class="rouble">i</span>
+									<!-- 1 980 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/mechta-pirata-belyj" title="Мечта пирата (белый)" >
-								<img src="http://cartonpapa.com/files/products/mechta3_sajt.290x192w.png?c99ccb479974af6472a5321298f0aef5"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/mechta-pirata-belyj" title="Мечта пирата (белый)" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/mechta3_sajt.290x192w.png?c99ccb479974af6472a5321298f0aef5"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item27" title="item27">
-							<div class="heading">
-								<span class="title"><a data-product="216" href="products/mini-domik-belyj">Мини домик (белый)</a></span>
-								<span class="price">
+							<!-- <li class="item27" title="item27"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="216" href="products/mini-domik-belyj">Мини домик (белый)</a></span> -->
+								<!-- <span class="price"> -->
 			
-			 </span>
-							</div>
-														<a href="products/mini-domik-belyj" title="Мини домик (белый)" >
-								<img src="http://cartonpapa.com/files/products/minidom4_sajt.290x192w.png?5db9f9d4aeb8cd4ca7a0bbde07759b52"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/mini-domik-belyj" title="Мини домик (белый)" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/minidom4_sajt.290x192w.png?5db9f9d4aeb8cd4ca7a0bbde07759b52"  > -->
 								
-							</a>
-																				</li>
+							<!-- </a> -->
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item7" title="item7">
-							<div class="heading">
-								<span class="title"><a data-product="214" href="products/parovozik-belyj">Паровозик (белый)</a></span>
-								<span class="price">
+							<!-- <li class="item7" title="item7"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="214" href="products/parovozik-belyj">Паровозик (белый)</a></span> -->
+								<!-- <span class="price"> -->
 			
-									1 650 <span class="rouble">i</span>
+									<!-- 1 650 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/parovozik-belyj" title="Паровозик (белый)" >
-								<img src="http://cartonpapa.com/files/products/DSC01552.290x192w.JPG?3557bb1547e35498f90bd8ffb4c78c34"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/parovozik-belyj" title="Паровозик (белый)" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/DSC01552.290x192w.JPG?3557bb1547e35498f90bd8ffb4c78c34"  > -->
 																																																					
-							</a>
+							<!-- </a> -->
 														
-							<del class="old-price">1 800 <span class="rouble">i</span></del>													</li>
+							<!-- <del class="old-price">1 800 <span class="rouble">i</span></del>													</li> -->
 
 
 
 
 
-							<li class="item7" title="item7">
-							<div class="heading">
-								<span class="title"><a data-product="58" href="products/parovozik-kraft">Паровозик (крафт)</a></span>
-								<span class="price">
+							<!-- <li class="item7" title="item7"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="58" href="products/parovozik-kraft">Паровозик (крафт)</a></span> -->
+								<!-- <span class="price"> -->
 			
-									1 650 <span class="rouble">i</span>
+									<!-- 1 650 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/parovozik-kraft" title="Паровозик (крафт)" >
-								<img src="http://cartonpapa.com/files/products/DSC01471.290x192w.JPG?ace0319aa2b74642092a2af8735daa36"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/parovozik-kraft" title="Паровозик (крафт)" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/DSC01471.290x192w.JPG?ace0319aa2b74642092a2af8735daa36"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item27" title="item27">
-							<div class="heading">
-								<span class="title"><a data-product="209" href="products/skazochnyj-zamok-belyj">Сказочный замок (белый)</a></span>
-								<span class="price">
+							<!-- <li class="item27" title="item27"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="209" href="products/skazochnyj-zamok-belyj">Сказочный замок (белый)</a></span> -->
+								<!-- <span class="price"> -->
 			
-			 </span>
-							</div>
-														<a href="products/skazochnyj-zamok-belyj" title="Сказочный замок (белый)" >
-								<img src="http://cartonpapa.com/files/products/DSC01677.290x192w.JPG?8361a7de8352b2188c53987e097899f7"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/skazochnyj-zamok-belyj" title="Сказочный замок (белый)" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/DSC01677.290x192w.JPG?8361a7de8352b2188c53987e097899f7"  > -->
 								
-							</a>
-																				</li>
+							<!-- </a> -->
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item27" title="item27">
-							<div class="heading">
-								<span class="title"><a data-product="208" href="products/domik-alisy-belyj">Домик Алисы (белый)</a></span>
-								<span class="price">
+							<!-- <li class="item27" title="item27"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="208" href="products/domik-alisy-belyj">Домик Алисы (белый)</a></span> -->
+								<!-- <span class="price"> -->
 			
-									440 <span class="rouble">i</span>
+									<!-- 440 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/domik-alisy-belyj" title="Домик Алисы (белый)" >
-								<img src="http://cartonpapa.com/files/products/DSC01746.290x192w.JPG?5b6152a28e281da400074dc5385477bb"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/domik-alisy-belyj" title="Домик Алисы (белый)" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/DSC01746.290x192w.JPG?5b6152a28e281da400074dc5385477bb"  > -->
 																																																					
-							</a>
+							<!-- </a> -->
 														
-							<del class="old-price">500 <span class="rouble">i</span></del>													</li>
+							<!-- <del class="old-price">500 <span class="rouble">i</span></del>													</li> -->
 
 
 
 
 
-							<li class="item7" title="item7">
-							<div class="heading">
-								<span class="title"><a data-product="207" href="products/kartonnaya-kuhnya-belaya">Картонная кухня (белая)</a></span>
-								<span class="price">
+							<!-- <li class="item7" title="item7"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="207" href="products/kartonnaya-kuhnya-belaya">Картонная кухня (белая)</a></span> -->
+								<!-- <span class="price"> -->
 			
-									1 430 <span class="rouble">i</span>
+									<!-- 1 430 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/kartonnaya-kuhnya-belaya" title="Картонная кухня (белая)" >
-								<img src="http://cartonpapa.com/files/products/%20%D0%B8%D0%B7%20%D0%BA%D0%B0%D1%80%D1%82%D0%BE%D0%BD%D0%B0_01_2.290x192w.JPG?8620621fabf2da2301396b559d7607c7"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/kartonnaya-kuhnya-belaya" title="Картонная кухня (белая)" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/%20%D0%B8%D0%B7%20%D0%BA%D0%B0%D1%80%D1%82%D0%BE%D0%BD%D0%B0_01_2.290x192w.JPG?8620621fabf2da2301396b559d7607c7"  > -->
 																																																					
-							</a>
+							<!-- </a> -->
 														
-							<del class="old-price">1 600 <span class="rouble">i</span></del>													</li>
+							<!-- <del class="old-price">1 600 <span class="rouble">i</span></del>													</li> -->
 
 
 
 
 
-							<li class="item16" title="item16">
-							<div class="heading">
-								<span class="title"><a data-product="168" href="products/gonki-po-kartonke">Гонки по картонке</a></span>
-								<span class="price">
+							<!-- <li class="item16" title="item16"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="168" href="products/gonki-po-kartonke">Гонки по картонке</a></span> -->
+								<!-- <span class="price"> -->
 			
-									880 <span class="rouble">i</span>
+									<!-- 880 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/gonki-po-kartonke" title="Гонки по картонке" >
-								<img src="http://cartonpapa.com/files/products/DSC00391.290x192w.JPG?a3bf1e41f7faed19367e33d91ba15136"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/gonki-po-kartonke" title="Гонки по картонке" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/DSC00391.290x192w.JPG?a3bf1e41f7faed19367e33d91ba15136"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item7" title="item7">
-							<div class="heading">
-								<span class="title"><a data-product="217" href="products/kafe-skovorodka-belyj">Кафе Сковородка (белый)</a></span>
-								<span class="price">
+							<!-- <li class="item7" title="item7"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="217" href="products/kafe-skovorodka-belyj">Кафе Сковородка (белый)</a></span> -->
+								<!-- <span class="price"> -->
 			
-									1 320 <span class="rouble">i</span>
+									<!-- 1 320 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/kafe-skovorodka-belyj" title="Кафе Сковородка (белый)" >
-								<img src="http://cartonpapa.com/files/products/toy-shoping-stand_01.290x192w.jpg?ea10067dfcdb08721917ece7bd2f1124"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/kafe-skovorodka-belyj" title="Кафе Сковородка (белый)" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/toy-shoping-stand_01.290x192w.jpg?ea10067dfcdb08721917ece7bd2f1124"  > -->
 																																																					
-							</a>
+							<!-- </a> -->
 														
-							<del class="old-price">1 300 <span class="rouble">i</span></del>													</li>
+							<!-- <del class="old-price">1 300 <span class="rouble">i</span></del>													</li> -->
 
 
 
 
 
-							<li class="item27" title="item27">
-							<div class="heading">
-								<span class="title"><a data-product="138" href="products/chetyre-komnaty-belyj">Четыре комнаты (белый)</a></span>
-								<span class="price">
+							<!-- <li class="item27" title="item27"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="138" href="products/chetyre-komnaty-belyj">Четыре комнаты (белый)</a></span> -->
+								<!-- <span class="price"> -->
 			
-									770 <span class="rouble">i</span>
+									<!-- 770 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/chetyre-komnaty-belyj" title="Четыре комнаты (белый)" >
-								<img src="http://cartonpapa.com/files/products/DSC_0019.290x192w.JPG?19c9ef52bc24dc0c275c27782761bc17"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/chetyre-komnaty-belyj" title="Четыре комнаты (белый)" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/DSC_0019.290x192w.JPG?19c9ef52bc24dc0c275c27782761bc17"  > -->
 																																																					
-							</a>
+							<!-- </a> -->
 														
-							<del class="old-price">800 <span class="rouble">i</span></del>													</li>
+							<!-- <del class="old-price">800 <span class="rouble">i</span></del>													</li> -->
 
 
 
 
 
-							<li class="item16" title="item16">
-							<div class="heading">
-								<span class="title"><a data-product="62" href="products/nabor-mnogobukv">Набор &quot;МногоБукв&quot;</a></span>
-								<span class="price">
+							<!-- <li class="item16" title="item16"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="62" href="products/nabor-mnogobukv">Набор &quot;МногоБукв&quot;</a></span> -->
+								<!-- <span class="price"> -->
 			
-									550 <span class="rouble">i</span>
+									<!-- 550 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/nabor-mnogobukv" title="Набор &quot;МногоБукв&quot;" >
-								<img src="http://cartonpapa.com/files/products/mnogobukv-01.290x192w.jpg?72ab7e3d1071307e0ab32bbfcfdd76e7"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/nabor-mnogobukv" title="Набор &quot;МногоБукв&quot;" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/mnogobukv-01.290x192w.jpg?72ab7e3d1071307e0ab32bbfcfdd76e7"  > -->
 																																																					
-							</a>
+							<!-- </a> -->
 														
-							<del class="old-price">800 <span class="rouble">i</span></del>													</li>
+							<!-- <del class="old-price">800 <span class="rouble">i</span></del>													</li> -->
 
 
 
 
 
-							<li class="item18" title="item18">
-							<div class="heading">
-								<span class="title"><a data-product="61" href="products/nabor-ya---rytsar">Набор &quot;Я - рыцарь!&quot;</a></span>
-								<span class="price">
+							<!-- <li class="item18" title="item18"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="61" href="products/nabor-ya---rytsar">Набор &quot;Я - рыцарь!&quot;</a></span> -->
+								<!-- <span class="price"> -->
 			
-									880 <span class="rouble">i</span>
+									<!-- 880 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/nabor-ya---rytsar" title="Набор &quot;Я - рыцарь!&quot;" >
-								<img src="http://cartonpapa.com/files/products/-%D0%B8-%D0%BC%D0%B5%D1%87-%D1%81%D0%B0%D0%B9%D1%82-10.290x192w.jpg?8de46252f392ad93a1f0740e850424f1"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/nabor-ya---rytsar" title="Набор &quot;Я - рыцарь!&quot;" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/-%D0%B8-%D0%BC%D0%B5%D1%87-%D1%81%D0%B0%D0%B9%D1%82-10.290x192w.jpg?8de46252f392ad93a1f0740e850424f1"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item16" title="item16">
-							<div class="heading">
-								<span class="title"><a data-product="228" href="products/podarok-mame-tsvetok">Подарок маме (цветок)</a></span>
-								<span class="price">
+							<!-- <li class="item16" title="item16"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="228" href="products/podarok-mame-tsvetok">Подарок маме (цветок)</a></span> -->
+								<!-- <span class="price"> -->
 			
-									550 <span class="rouble">i</span>
+									<!-- 550 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/podarok-mame-tsvetok" title="Подарок маме (цветок)" >
-								<img src="http://cartonpapa.com/files/products/DSC01998.290x192w.JPG?fdf225f0b6ae217d095f4949e24c1aa4"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/podarok-mame-tsvetok" title="Подарок маме (цветок)" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/DSC01998.290x192w.JPG?fdf225f0b6ae217d095f4949e24c1aa4"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item27" title="item27">
-							<div class="heading">
-								<span class="title"><a data-product="54" href="products/moj-pervyj-dom-belyj">Мой первый дом (белый)</a></span>
-								<span class="price">
+							<!-- <li class="item27" title="item27"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="54" href="products/moj-pervyj-dom-belyj">Мой первый дом (белый)</a></span> -->
+								<!-- <span class="price"> -->
 			
-									1 320 <span class="rouble">i</span>
+									<!-- 1 320 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/moj-pervyj-dom-belyj" title="Мой первый дом (белый)" >
-								<img src="http://cartonpapa.com/files/products/mojdom3_sajt.290x192w.png?ebec77a2531e2ab0d4ea6c044b26b03c"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/moj-pervyj-dom-belyj" title="Мой первый дом (белый)" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/mojdom3_sajt.290x192w.png?ebec77a2531e2ab0d4ea6c044b26b03c"  > -->
 																																																					
-							</a>
+							<!-- </a> -->
 														
-							<del class="old-price">1 450 <span class="rouble">i</span></del>													</li>
+							<!-- <del class="old-price">1 450 <span class="rouble">i</span></del>													</li> -->
 
 
 
 
 
-							<li class="item27" title="item27">
-							<div class="heading">
-								<span class="title"><a data-product="43" href="products/moj-pervyj-dom-kraft">Мой первый дом (крафт)</a></span>
-								<span class="price">
+							<!-- <li class="item27" title="item27"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="43" href="products/moj-pervyj-dom-kraft">Мой первый дом (крафт)</a></span> -->
+								<!-- <span class="price"> -->
 			
-									1 210 <span class="rouble">i</span>
+									<!-- 1 210 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/moj-pervyj-dom-kraft" title="Мой первый дом (крафт)" >
-								<img src="http://cartonpapa.com/files/products/dom_06_big.290x192w.jpg?1b6515c37b747a551146836fbf0d178f"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/moj-pervyj-dom-kraft" title="Мой первый дом (крафт)" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/dom_06_big.290x192w.jpg?1b6515c37b747a551146836fbf0d178f"  > -->
 																																																					
-							</a>
+							<!-- </a> -->
 														
-							<del class="old-price">1 300 <span class="rouble">i</span></del>													</li>
+							<!-- <del class="old-price">1 300 <span class="rouble">i</span></del>													</li> -->
 
 
 
 
 
-							<li class="item23" title="item23">
-							<div class="heading">
-								<span class="title"><a data-product="304" href="products/derevo-s-listochkami">Дерево с листочками</a></span>
-								<span class="price">
+							<!-- <li class="item23" title="item23"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="304" href="products/derevo-s-listochkami">Дерево с листочками</a></span> -->
+								<!-- <span class="price"> -->
 			
-									990 <span class="rouble">i</span>
+									<!-- 990 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/derevo-s-listochkami" title="Дерево с листочками" >
-								<img src="http://cartonpapa.com/files/products/dsc00397.290x192w.jpg?684dc4dde6545179ba044feb78aa3b16"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/derevo-s-listochkami" title="Дерево с листочками" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/dsc00397.290x192w.jpg?684dc4dde6545179ba044feb78aa3b16"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item23" title="item23">
-							<div class="heading">
-								<span class="title"><a data-product="305" href="products/derevo-1">Дерево №1</a></span>
-								<span class="price">
+							<!-- <li class="item23" title="item23"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="305" href="products/derevo-1">Дерево №1</a></span> -->
+								<!-- <span class="price"> -->
 			
-									330 <span class="rouble">i</span>
+									<!-- 330 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/derevo-1" title="Дерево №1" >
-								<img src="http://cartonpapa.com/files/products/kartonnoe-derevo.290x192w.jpg?0e272530fbb725de3999d2c3e97566c9"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/derevo-1" title="Дерево №1" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/kartonnoe-derevo.290x192w.jpg?0e272530fbb725de3999d2c3e97566c9"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item23" title="item23">
-							<div class="heading">
-								<span class="title"><a data-product="299" href="products/derevo-2">Дерево №2</a></span>
-								<span class="price">
+							<!-- <li class="item23" title="item23"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="299" href="products/derevo-2">Дерево №2</a></span> -->
+								<!-- <span class="price"> -->
 			
-									1 550 <span class="rouble">i</span>
+									<!-- 1 550 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/derevo-2" title="Дерево №2" >
-								<img src="http://cartonpapa.com/files/products/cartonpapa.com-derevo2-01.290x192w.jpg?0d329321d5156ac9b35fe1f9acd72d97"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/derevo-2" title="Дерево №2" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/cartonpapa.com-derevo2-01.290x192w.jpg?0d329321d5156ac9b35fe1f9acd72d97"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item23" title="item23">
-							<div class="heading">
-								<span class="title"><a data-product="218" href="products/derevo-3">Дерево №3</a></span>
-								<span class="price">
+							<!-- <li class="item23" title="item23"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="218" href="products/derevo-3">Дерево №3</a></span> -->
+								<!-- <span class="price"> -->
 			
-									3 300 <span class="rouble">i</span>
+									<!-- 3 300 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/derevo-3" title="Дерево №3" >
-								<img src="http://cartonpapa.com/files/products/derevo-3.290x192w.jpg?c9a3bff003693f1a1db8e13c672090c7"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/derevo-3" title="Дерево №3" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/derevo-3.290x192w.jpg?c9a3bff003693f1a1db8e13c672090c7"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item23" title="item23">
-							<div class="heading">
-								<span class="title"><a data-product="333" href="products/bolshoe-derevo">Большое дерево</a></span>
-								<span class="price">
+							<!-- <li class="item23" title="item23"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="333" href="products/bolshoe-derevo">Большое дерево</a></span> -->
+								<!-- <span class="price"> -->
 			
-									5 500 <span class="rouble">i</span>
+									<!-- 5 500 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/bolshoe-derevo" title="Большое дерево" >
-								<img src="http://cartonpapa.com/files/products/img_20190617_152813.290x192w.jpg?df9802132df8567ce8d3ee4a00fee334"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/bolshoe-derevo" title="Большое дерево" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/img_20190617_152813.290x192w.jpg?df9802132df8567ce8d3ee4a00fee334"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item18" title="item18">
-							<div class="heading">
-								<span class="title"><a data-product="212" href="products/dospehi-rytsarya-belye">Доспехи рыцаря (белые)</a></span>
-								<span class="price">
+							<!-- <li class="item18" title="item18"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="212" href="products/dospehi-rytsarya-belye">Доспехи рыцаря (белые)</a></span> -->
+								<!-- <span class="price"> -->
 			
-			 </span>
-							</div>
-														<a href="products/dospehi-rytsarya-belye" title="Доспехи рыцаря (белые)" >
-								<img src="http://cartonpapa.com/files/products/%20%D1%80%D1%8B%D1%86%D0%B0%D1%80%D1%8F_02.290x192w.jpg?9ae2daef400d0f76823dbddf61a2f541"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/dospehi-rytsarya-belye" title="Доспехи рыцаря (белые)" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/%20%D1%80%D1%8B%D1%86%D0%B0%D1%80%D1%8F_02.290x192w.jpg?9ae2daef400d0f76823dbddf61a2f541"  > -->
 								
-							</a>
-																				</li>
+							<!-- </a> -->
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item16" title="item16">
-							<div class="heading">
-								<span class="title"><a data-product="257" href="products/domashnij-tritseratops">Домашний  Трицератопс</a></span>
-								<span class="price">
+							<!-- <li class="item16" title="item16"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="257" href="products/domashnij-tritseratops">Домашний  Трицератопс</a></span> -->
+								<!-- <span class="price"> -->
 			
-			 </span>
-							</div>
-														<a href="products/domashnij-tritseratops" title="Домашний  Трицератопс" >
-								<img src="http://cartonpapa.com/files/products/DSC01147.290x192w.JPG?ec0f46c6ca766c29c8d75ad37787e0c4"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/domashnij-tritseratops" title="Домашний  Трицератопс" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/DSC01147.290x192w.JPG?ec0f46c6ca766c29c8d75ad37787e0c4"  > -->
 								
-							</a>
-																				</li>
+							<!-- </a> -->
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item16" title="item16">
-							<div class="heading">
-								<span class="title"><a data-product="256" href="products/domashnij-stegozavr">Домашний  Стегозавр</a></span>
-								<span class="price">
+							<!-- <li class="item16" title="item16"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="256" href="products/domashnij-stegozavr">Домашний  Стегозавр</a></span> -->
+								<!-- <span class="price"> -->
 			
-									550 <span class="rouble">i</span>
+									<!-- 550 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/domashnij-stegozavr" title="Домашний  Стегозавр" >
-								<img src="http://cartonpapa.com/files/products/stegozavr-painted-01.290x192w.jpg?cfb8689ca18562a0dd45c3e90642750c"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/domashnij-stegozavr" title="Домашний  Стегозавр" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/stegozavr-painted-01.290x192w.jpg?cfb8689ca18562a0dd45c3e90642750c"  > -->
 																																																					
-							</a>
+							<!-- </a> -->
 														
-							<del class="old-price">750 <span class="rouble">i</span></del>													</li>
+							<!-- <del class="old-price">750 <span class="rouble">i</span></del>													</li> -->
 
 
 
 
 
-							<li class="item16" title="item16">
-							<div class="heading">
-								<span class="title"><a data-product="255" href="products/domashnij-apatozavr">Домашний  Апатозавр</a></span>
-								<span class="price">
+							<!-- <li class="item16" title="item16"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="255" href="products/domashnij-apatozavr">Домашний  Апатозавр</a></span> -->
+								<!-- <span class="price"> -->
 			
-									825 <span class="rouble">i</span>
+									<!-- 825 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/domashnij-apatozavr" title="Домашний  Апатозавр" >
-								<img src="http://cartonpapa.com/files/products/DSC01861.290x192w.JPG?ae3dec87241ba351ebb4b8cdc142e052"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/domashnij-apatozavr" title="Домашний  Апатозавр" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/DSC01861.290x192w.JPG?ae3dec87241ba351ebb4b8cdc142e052"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item16" title="item16">
-							<div class="heading">
-								<span class="title"><a data-product="254" href="products/domashnij-tirannozavr">Домашний  Тираннозавр</a></span>
-								<span class="price">
+							<!-- <li class="item16" title="item16"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="254" href="products/domashnij-tirannozavr">Домашний  Тираннозавр</a></span> -->
+								<!-- <span class="price"> -->
 			
-									825 <span class="rouble">i</span>
+									<!-- 825 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/domashnij-tirannozavr" title="Домашний  Тираннозавр" >
-								<img src="http://cartonpapa.com/files/products/DSC01158%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.290x192w.JPG?1208b0507acaaa14b4e1681edecfd593"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/domashnij-tirannozavr" title="Домашний  Тираннозавр" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/DSC01158%20%E2%80%94%20%D0%BA%D0%BE%D0%BF%D0%B8%D1%8F.290x192w.JPG?1208b0507acaaa14b4e1681edecfd593"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item23" title="item23">
-							<div class="heading">
-								<span class="title"><a data-product="331" href="products/kadillak">Кадиллак</a></span>
-								<span class="price">
+							<!-- <li class="item23" title="item23"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="331" href="products/kadillak">Кадиллак</a></span> -->
+								<!-- <span class="price"> -->
 			
-									5 500 <span class="rouble">i</span>
+									<!-- 5 500 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/kadillak" title="Кадиллак" >
-								<img src="http://cartonpapa.com/files/products/img_20190525_095910.290x192w.jpg?553a83ed1210b1c2da8991d5184c9828"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/kadillak" title="Кадиллак" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/img_20190525_095910.290x192w.jpg?553a83ed1210b1c2da8991d5184c9828"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item23" title="item23">
-							<div class="heading">
-								<span class="title"><a data-product="330" href="products/sunduk">Сундук</a></span>
-								<span class="price">
+							<!-- <li class="item23" title="item23"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="330" href="products/sunduk">Сундук</a></span> -->
+								<!-- <span class="price"> -->
 			
-									5 500 <span class="rouble">i</span>
+									<!-- 5 500 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/sunduk" title="Сундук" >
-								<img src="http://cartonpapa.com/files/products/img_20190517_103234.290x192w.jpg?e2606a78ad8de6d54dc44dddefff1e0e"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/sunduk" title="Сундук" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/img_20190517_103234.290x192w.jpg?e2606a78ad8de6d54dc44dddefff1e0e"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item28" title="item28">
-							<div class="heading">
-								<span class="title"><a data-product="326" href="products/bolshaya-raskraska">Большая раскраска</a></span>
-								<span class="price">
+							<!-- <li class="item28" title="item28"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="326" href="products/bolshaya-raskraska">Большая раскраска</a></span> -->
+								<!-- <span class="price"> -->
 			
-									20 900 <span class="rouble">i</span>
+									<!-- 20 900 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/bolshaya-raskraska" title="Большая раскраска" >
-								<img src="http://cartonpapa.com/files/products/ras1.290x192w.jpg?10a65254e35a8456be9d1e72cb4266d1"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/bolshaya-raskraska" title="Большая раскраска" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/ras1.290x192w.jpg?10a65254e35a8456be9d1e72cb4266d1"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item38" title="item38">
-							<div class="heading">
-								<span class="title"><a data-product="325" href="products/dinozavry">Динозавры</a></span>
-								<span class="price">
+							<!-- <li class="item38" title="item38"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="325" href="products/dinozavry">Динозавры</a></span> -->
+								<!-- <span class="price"> -->
 			
-									10 230 <span class="rouble">i</span>
+									<!-- 10 230 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/dinozavry" title="Динозавры" >
-								<img src="http://cartonpapa.com/files/products/img_20180929_132335.290x192w.jpg?cf2316aacd51fd8616eedf630e507d20"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/dinozavry" title="Динозавры" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/img_20180929_132335.290x192w.jpg?cf2316aacd51fd8616eedf630e507d20"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item38" title="item38">
-							<div class="heading">
-								<span class="title"><a data-product="324" href="products/avtomobil">Автомобиль</a></span>
-								<span class="price">
+							<!-- <li class="item38" title="item38"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="324" href="products/avtomobil">Автомобиль</a></span> -->
+								<!-- <span class="price"> -->
 			
-									2 420 <span class="rouble">i</span>
+									<!-- 2 420 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/avtomobil" title="Автомобиль" >
-								<img src="http://cartonpapa.com/files/products/img_20190401_083148_1.290x192w.jpg?309933476f5ac9ed4d4b52c8ae53c30b"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/avtomobil" title="Автомобиль" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/img_20190401_083148_1.290x192w.jpg?309933476f5ac9ed4d4b52c8ae53c30b"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item38" title="item38">
-							<div class="heading">
-								<span class="title"><a data-product="323" href="products/deti">Дети</a></span>
-								<span class="price">
+							<!-- <li class="item38" title="item38"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="323" href="products/deti">Дети</a></span> -->
+								<!-- <span class="price"> -->
 			
-									5 500 <span class="rouble">i</span>
+									<!-- 5 500 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/deti" title="Дети" >
-								<img src="http://cartonpapa.com/files/products/img_20190508_093250.290x192w.jpg?c28a4854c38cddd9975c85fd82282fa6"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/deti" title="Дети" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/img_20190508_093250.290x192w.jpg?c28a4854c38cddd9975c85fd82282fa6"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item23" title="item23">
-							<div class="heading">
-								<span class="title"><a data-product="321" href="products/zamok-shirma">Замок-ширма</a></span>
-								<span class="price">
+							<!-- <li class="item23" title="item23"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="321" href="products/zamok-shirma">Замок-ширма</a></span> -->
+								<!-- <span class="price"> -->
 			
-									6 600 <span class="rouble">i</span>
+									<!-- 6 600 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/zamok-shirma" title="Замок-ширма" >
-								<img src="http://cartonpapa.com/files/products/img_20190401_083420mal.290x192w.jpg?7724fa0039169c478e3890c942fc535e"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/zamok-shirma" title="Замок-ширма" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/img_20190401_083420mal.290x192w.jpg?7724fa0039169c478e3890c942fc535e"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item23" title="item23">
-							<div class="heading">
-								<span class="title"><a data-product="317" href="products/dekoratsiya-zamok">Декорация &quot;Замок&quot;</a></span>
-								<span class="price">
+							<!-- <li class="item23" title="item23"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="317" href="products/dekoratsiya-zamok">Декорация &quot;Замок&quot;</a></span> -->
+								<!-- <span class="price"> -->
 			
-									33 000 <span class="rouble">i</span>
+									<!-- 33 000 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/dekoratsiya-zamok" title="Декорация &quot;Замок&quot;" >
-								<img src="http://cartonpapa.com/files/products/img_20190409_153410mal.290x192w.jpg?71c8da59ca49e8c8f1b7d627d1fb4f65"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/dekoratsiya-zamok" title="Декорация &quot;Замок&quot;" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/img_20190409_153410mal.290x192w.jpg?71c8da59ca49e8c8f1b7d627d1fb4f65"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item38" title="item38">
-							<div class="heading">
-								<span class="title"><a data-product="318" href="products/kosmos">Космос</a></span>
-								<span class="price">
+							<!-- <li class="item38" title="item38"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="318" href="products/kosmos">Космос</a></span> -->
+								<!-- <span class="price"> -->
 			
-									4 290 <span class="rouble">i</span>
+									<!-- 4 290 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/kosmos" title="Космос" >
-								<img src="http://cartonpapa.com/files/products/img_20190410_100026-mal.290x192w.jpg?8fe9411c304849a4e89b93690c6361c4"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/kosmos" title="Космос" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/img_20190410_100026-mal.290x192w.jpg?8fe9411c304849a4e89b93690c6361c4"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item38" title="item38">
-							<div class="heading">
-								<span class="title"><a data-product="316" href="products/kuban">Кубань</a></span>
-								<span class="price">
+							<!-- <li class="item38" title="item38"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="316" href="products/kuban">Кубань</a></span> -->
+								<!-- <span class="price"> -->
 			
-									9 240 <span class="rouble">i</span>
+									<!-- 9 240 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/kuban" title="Кубань" >
-								<img src="http://cartonpapa.com/files/products/p_20190426_131014.290x192w.jpg?f4ae89564de044748f5c75f70f215de4"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/kuban" title="Кубань" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/p_20190426_131014.290x192w.jpg?f4ae89564de044748f5c75f70f215de4"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item38" title="item38">
-							<div class="heading">
-								<span class="title"><a data-product="315" href="products/aziya">Азия</a></span>
-								<span class="price">
+							<!-- <li class="item38" title="item38"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="315" href="products/aziya">Азия</a></span> -->
+								<!-- <span class="price"> -->
 			
-									9 570 <span class="rouble">i</span>
+									<!-- 9 570 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/aziya" title="Азия" >
-								<img src="http://cartonpapa.com/files/products/p_20190426_130412.290x192w.jpg?1ffbb334e08b5e74039008bcf623f89e"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/aziya" title="Азия" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/p_20190426_130412.290x192w.jpg?1ffbb334e08b5e74039008bcf623f89e"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item38" title="item38">
-							<div class="heading">
-								<span class="title"><a data-product="314" href="products/dikij-zapad">Дикий запад</a></span>
-								<span class="price">
+							<!-- <li class="item38" title="item38"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="314" href="products/dikij-zapad">Дикий запад</a></span> -->
+								<!-- <span class="price"> -->
 			
-									10 230 <span class="rouble">i</span>
+									<!-- 10 230 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/dikij-zapad" title="Дикий запад" >
-								<img src="http://cartonpapa.com/files/products/p_20190426_130009.290x192w.jpg?ce1c5bc469bea3435585d1ca4f854dfd"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/dikij-zapad" title="Дикий запад" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/p_20190426_130009.290x192w.jpg?ce1c5bc469bea3435585d1ca4f854dfd"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item38" title="item38">
-							<div class="heading">
-								<span class="title"><a data-product="313" href="products/indejtsy">Индейцы</a></span>
-								<span class="price">
+							<!-- <li class="item38" title="item38"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="313" href="products/indejtsy">Индейцы</a></span> -->
+								<!-- <span class="price"> -->
 			
-									9 460 <span class="rouble">i</span>
+									<!-- 9 460 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/indejtsy" title="Индейцы" >
-								<img src="http://cartonpapa.com/files/products/p_20190426_125444.290x192w.jpg?657738cef8fc55365ec0534b85d071d3"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/indejtsy" title="Индейцы" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/p_20190426_125444.290x192w.jpg?657738cef8fc55365ec0534b85d071d3"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item38" title="item38">
-							<div class="heading">
-								<span class="title"><a data-product="312" href="products/venetsiya">Венеция</a></span>
-								<span class="price">
+							<!-- <li class="item38" title="item38"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="312" href="products/venetsiya">Венеция</a></span> -->
+								<!-- <span class="price"> -->
 			
-									10 450 <span class="rouble">i</span>
+									<!-- 10 450 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/venetsiya" title="Венеция" >
-								<img src="http://cartonpapa.com/files/products/p_20190426_124930.290x192w.jpg?71a9aa6343648aaf65ddd17874eeb34a"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/venetsiya" title="Венеция" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/p_20190426_124930.290x192w.jpg?71a9aa6343648aaf65ddd17874eeb34a"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item18" title="item18">
-							<div class="heading">
-								<span class="title"><a data-product="310" href="products/retro-avtomobil">Ретро-автомобиль</a></span>
-								<span class="price">
+							<!-- <li class="item18" title="item18"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="310" href="products/retro-avtomobil">Ретро-автомобиль</a></span> -->
+								<!-- <span class="price"> -->
 			
-			 </span>
-							</div>
-														<a href="products/retro-avtomobil" title="Ретро-автомобиль" >
-								<img src="http://cartonpapa.com/files/products/img_20180922_214113.290x192w.jpg?d9a6d0de4941765b533d4edafe427cad"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/retro-avtomobil" title="Ретро-автомобиль" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/img_20180922_214113.290x192w.jpg?d9a6d0de4941765b533d4edafe427cad"  > -->
 								
-							</a>
-																				</li>
+							<!-- </a> -->
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item23" title="item23">
-							<div class="heading">
-								<span class="title"><a data-product="309" href="products/skazochnyj-les">Сказочный лес</a></span>
-								<span class="price">
+							<!-- <li class="item23" title="item23"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="309" href="products/skazochnyj-les">Сказочный лес</a></span> -->
+								<!-- <span class="price"> -->
 			
-									4 950 <span class="rouble">i</span>
+									<!-- 4 950 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/skazochnyj-les" title="Сказочный лес" >
-								<img src="http://cartonpapa.com/files/products/skazochnyj-les-800h600.290x192w.jpg?3af2a074a376e8a75f4fad1308b77e62"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/skazochnyj-les" title="Сказочный лес" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/skazochnyj-les-800h600.290x192w.jpg?3af2a074a376e8a75f4fad1308b77e62"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item6" title="item6">
-							<div class="heading">
-								<span class="title"><a data-product="303" href="products/labirint-gorod">Лабиринт-город</a></span>
-								<span class="price">
+							<!-- <li class="item6" title="item6"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="303" href="products/labirint-gorod">Лабиринт-город</a></span> -->
+								<!-- <span class="price"> -->
 			
-									30 800 <span class="rouble">i</span>
+									<!-- 30 800 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/labirint-gorod" title="Лабиринт-город" >
-								<img src="http://cartonpapa.com/files/products/kartonnyj-labirint-3.290x192w.jpg?e424e8746d4cb6e313c6e9702bb934b9"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/labirint-gorod" title="Лабиринт-город" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/kartonnyj-labirint-3.290x192w.jpg?e424e8746d4cb6e313c6e9702bb934b9"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item23" title="item23">
-							<div class="heading">
-								<span class="title"><a data-product="307" href="products/korova-i-koza">Корова и коза</a></span>
-								<span class="price">
+							<!-- <li class="item23" title="item23"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="307" href="products/korova-i-koza">Корова и коза</a></span> -->
+								<!-- <span class="price"> -->
 			
-									1 980 <span class="rouble">i</span>
+									<!-- 1 980 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/korova-i-koza" title="Корова и коза" >
-								<img src="http://cartonpapa.com/files/products/korova-i-koza.290x192w.jpg?998ced6ac19c6bd435797e4cf0f78a58"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/korova-i-koza" title="Корова и коза" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/korova-i-koza.290x192w.jpg?998ced6ac19c6bd435797e4cf0f78a58"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item23" title="item23">
-							<div class="heading">
-								<span class="title"><a data-product="306" href="products/samolet-i-oblaka">Самолет и облака</a></span>
-								<span class="price">
+							<!-- <li class="item23" title="item23"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="306" href="products/samolet-i-oblaka">Самолет и облака</a></span> -->
+								<!-- <span class="price"> -->
 			
-									1 980 <span class="rouble">i</span>
+									<!-- 1 980 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/samolet-i-oblaka" title="Самолет и облака" >
-								<img src="http://cartonpapa.com/files/products/img_20180709_112738.290x192w.jpg?adcf86b062646d6d5741211bd120c206"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/samolet-i-oblaka" title="Самолет и облака" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/img_20180709_112738.290x192w.jpg?adcf86b062646d6d5741211bd120c206"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item6" title="item6">
-							<div class="heading">
-								<span class="title"><a data-product="302" href="products/fotozona-na-zakaz">Фотозона на заказ</a></span>
-								<span class="price">
+							<!-- <li class="item6" title="item6"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="302" href="products/fotozona-na-zakaz">Фотозона на заказ</a></span> -->
+								<!-- <span class="price"> -->
 			
-			 </span>
-							</div>
-														<a href="products/fotozona-na-zakaz" title="Фотозона на заказ" >
-								<img src="http://cartonpapa.com/files/products/prajs-list-po-fotodekoru_1.290x192w.jpg?6f478c590cdc303f0eaa46a29b7a5538"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/fotozona-na-zakaz" title="Фотозона на заказ" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/prajs-list-po-fotodekoru_1.290x192w.jpg?6f478c590cdc303f0eaa46a29b7a5538"  > -->
 								
-							</a>
-																				</li>
+							<!-- </a> -->
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item6" title="item6">
-							<div class="heading">
-								<span class="title"><a data-product="301" href="products/zelenyj-les">Зеленый лес</a></span>
-								<span class="price">
+							<!-- <li class="item6" title="item6"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="301" href="products/zelenyj-les">Зеленый лес</a></span> -->
+								<!-- <span class="price"> -->
 			
-									13 750 <span class="rouble">i</span>
+									<!-- 13 750 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/zelenyj-les" title="Зеленый лес" >
-								<img src="http://cartonpapa.com/files/products/fotozona-les-3.290x192w.jpg?c24a8fa0123bb1c09965f5595c4f94b4"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/zelenyj-les" title="Зеленый лес" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/fotozona-les-3.290x192w.jpg?c24a8fa0123bb1c09965f5595c4f94b4"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item6" title="item6">
-							<div class="heading">
-								<span class="title"><a data-product="300" href="products/piraty">Пираты</a></span>
-								<span class="price">
+							<!-- <li class="item6" title="item6"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="300" href="products/piraty">Пираты</a></span> -->
+								<!-- <span class="price"> -->
 			
-									2 640 <span class="rouble">i</span>
+									<!-- 2 640 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/piraty" title="Пираты" >
-								<img src="http://cartonpapa.com/files/products/img_20180725_174019.290x192w.jpg?1de7dfd2d87820353fe2dd99d2b7c2af"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/piraty" title="Пираты" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/img_20180725_174019.290x192w.jpg?1de7dfd2d87820353fe2dd99d2b7c2af"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item23" title="item23">
-							<div class="heading">
-								<span class="title"><a data-product="283" href="products/loshadka-kachalka-vzroslaya">Лошадка-качалка (взрослая)</a></span>
-								<span class="price">
+							<!-- <li class="item23" title="item23"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="283" href="products/loshadka-kachalka-vzroslaya">Лошадка-качалка (взрослая)</a></span> -->
+								<!-- <span class="price"> -->
 			
-			 </span>
-							</div>
-														<a href="products/loshadka-kachalka-vzroslaya" title="Лошадка-качалка (взрослая)" >
-								<img src="http://cartonpapa.com/files/products/dsc00266.290x192w.jpg?e5944ba893c8f939e56a5bf71d161b6a"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/loshadka-kachalka-vzroslaya" title="Лошадка-качалка (взрослая)" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/dsc00266.290x192w.jpg?e5944ba893c8f939e56a5bf71d161b6a"  > -->
 								
-							</a>
-																				</li>
+							<!-- </a> -->
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item23" title="item23">
-							<div class="heading">
-								<span class="title"><a data-product="197" href="products/stajka-zhivotnyh">Стайка животных</a></span>
-								<span class="price">
+							<!-- <li class="item23" title="item23"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="197" href="products/stajka-zhivotnyh">Стайка животных</a></span> -->
+								<!-- <span class="price"> -->
 			
-									3 080 <span class="rouble">i</span>
+									<!-- 3 080 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/stajka-zhivotnyh" title="Стайка животных" >
-								<img src="http://cartonpapa.com/files/products/DSC00878.290x192w.JPG?a0ebb819acdcec81e41324eef6424d11"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/stajka-zhivotnyh" title="Стайка животных" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/DSC00878.290x192w.JPG?a0ebb819acdcec81e41324eef6424d11"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item27" title="item27">
-							<div class="heading">
-								<span class="title"><a data-product="238" href="products/domik-dlya-koshek-koshki-myshki-belyi">Домик &quot;Кошки-мышки&quot; (белый)</a></span>
-								<span class="price">
+							<!-- <li class="item27" title="item27"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="238" href="products/domik-dlya-koshek-koshki-myshki-belyi">Домик &quot;Кошки-мышки&quot; (белый)</a></span> -->
+								<!-- <span class="price"> -->
 			
-			 </span>
-							</div>
-														<a href="products/domik-dlya-koshek-koshki-myshki-belyi" title="Домик &quot;Кошки-мышки&quot; (белый)" >
-								<img src="http://cartonpapa.com/files/products/cartonpapa.com-koshki-myshki-01.290x192w.jpg?97998d793abec8079b53d9b14136d5b8"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/domik-dlya-koshek-koshki-myshki-belyi" title="Домик &quot;Кошки-мышки&quot; (белый)" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/cartonpapa.com-koshki-myshki-01.290x192w.jpg?97998d793abec8079b53d9b14136d5b8"  > -->
 								
-							</a>
-																				</li>
+							<!-- </a> -->
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item16" title="item16">
-							<div class="heading">
-								<span class="title"><a data-product="237" href="products/volshebnyj-zamok-raskraska">Картонный замок</a></span>
-								<span class="price">
+							<!-- <li class="item16" title="item16"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="237" href="products/volshebnyj-zamok-raskraska">Картонный замок</a></span> -->
+								<!-- <span class="price"> -->
 			
-			 </span>
-							</div>
-														<a href="products/volshebnyj-zamok-raskraska" title="Картонный замок" >
-								<img src="http://cartonpapa.com/files/products/33_2.290x192w.jpg?76e014da4e61094a2e6a9f7abae26909"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/volshebnyj-zamok-raskraska" title="Картонный замок" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/33_2.290x192w.jpg?76e014da4e61094a2e6a9f7abae26909"  > -->
 								
-							</a>
-																				</li>
+							<!-- </a> -->
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item27" title="item27">
-							<div class="heading">
-								<span class="title"><a data-product="235" href="products/domik-koshki-myshki">Домик &quot;Кошки-мышки&quot; (крафт)</a></span>
-								<span class="price">
+							<!-- <li class="item27" title="item27"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="235" href="products/domik-koshki-myshki">Домик &quot;Кошки-мышки&quot; (крафт)</a></span> -->
+								<!-- <span class="price"> -->
 			
-			 </span>
-							</div>
-														<a href="products/domik-koshki-myshki" title="Домик &quot;Кошки-мышки&quot; (крафт)" >
-								<img src="http://cartonpapa.com/files/products/44.290x192w.jpg?84907daa5666c942e11ad69526397a4c"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/domik-koshki-myshki" title="Домик &quot;Кошки-мышки&quot; (крафт)" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/44.290x192w.jpg?84907daa5666c942e11ad69526397a4c"  > -->
 								
-							</a>
-																				</li>
+							<!-- </a> -->
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item16" title="item16">
-							<div class="heading">
-								<span class="title"><a data-product="229" href="products/podarok-pape-korabl-albatros">Пиратский корабль</a></span>
-								<span class="price">
+							<!-- <li class="item16" title="item16"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="229" href="products/podarok-pape-korabl-albatros">Пиратский корабль</a></span> -->
+								<!-- <span class="price"> -->
 			
-			 </span>
-							</div>
-														<a href="products/podarok-pape-korabl-albatros" title="Пиратский корабль" >
-								<img src="http://cartonpapa.com/files/products/11_1.290x192w.jpg?cfcb2ea2bafb8c66c1de75bd47008823"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/podarok-pape-korabl-albatros" title="Пиратский корабль" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/11_1.290x192w.jpg?cfcb2ea2bafb8c66c1de75bd47008823"  > -->
 								
-							</a>
-																				</li>
+							<!-- </a> -->
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item27" title="item27">
-							<div class="heading">
-								<span class="title"><a data-product="142" href="products/kukolnaya-mebel">Кукольная мебель</a></span>
-								<span class="price">
+							<!-- <li class="item27" title="item27"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="142" href="products/kukolnaya-mebel">Кукольная мебель</a></span> -->
+								<!-- <span class="price"> -->
 			
-			 </span>
-							</div>
-														<a href="products/kukolnaya-mebel" title="Кукольная мебель" >
-								<img src="http://cartonpapa.com/files/products/cartonpapa.com-kukolnaya-mebel-02.290x192w.jpg?c3b830420ab9541a831a546578b14551"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/kukolnaya-mebel" title="Кукольная мебель" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/cartonpapa.com-kukolnaya-mebel-02.290x192w.jpg?c3b830420ab9541a831a546578b14551"  > -->
 								
-							</a>
-																				</li>
+							<!-- </a> -->
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item28" title="item28">
-							<div class="heading">
-								<span class="title"><a data-product="219" href="products/kartonnyj-labirint-4х4">Картонный лабиринт 4х4</a></span>
-								<span class="price">
+							<!-- <li class="item28" title="item28"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="219" href="products/kartonnyj-labirint-4х4">Картонный лабиринт 4х4</a></span> -->
+								<!-- <span class="price"> -->
 			
-									30 800 <span class="rouble">i</span>
+									<!-- 30 800 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/kartonnyj-labirint-4х4" title="Картонный лабиринт 4х4" >
-								<img src="http://cartonpapa.com/files/products/lab1.290x192w.jpg?39b9140e3e2eb5617ad97a79b600d2a3"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/kartonnyj-labirint-4х4" title="Картонный лабиринт 4х4" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/lab1.290x192w.jpg?39b9140e3e2eb5617ad97a79b600d2a3"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item28" title="item28">
-							<div class="heading">
-								<span class="title"><a data-product="273" href="products/kartonnyj-kosmolabirint">Картонный Космолабиринт</a></span>
-								<span class="price">
+							<!-- <li class="item28" title="item28"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="273" href="products/kartonnyj-kosmolabirint">Картонный Космолабиринт</a></span> -->
+								<!-- <span class="price"> -->
 			
-									38 000 <span class="rouble">i</span>
+									<!-- 38 000 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/kartonnyj-kosmolabirint" title="Картонный Космолабиринт" >
-								<img src="http://cartonpapa.com/files/products/11114020_660528614076964_4734694316643691343_n_1.290x192w.jpg?ac39dad237b671bf6d144e24774215f0"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/kartonnyj-kosmolabirint" title="Картонный Космолабиринт" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/11114020_660528614076964_4734694316643691343_n_1.290x192w.jpg?ac39dad237b671bf6d144e24774215f0"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item28" title="item28">
-							<div class="heading">
-								<span class="title"><a data-product="274" href="products/labirint-korabl">Лабиринт-корабль</a></span>
-								<span class="price">
+							<!-- <li class="item28" title="item28"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="274" href="products/labirint-korabl">Лабиринт-корабль</a></span> -->
+								<!-- <span class="price"> -->
 			
-									41 800 <span class="rouble">i</span>
+									<!-- 41 800 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/labirint-korabl" title="Лабиринт-корабль" >
-								<img src="http://cartonpapa.com/files/products/dsc_0186.290x192w.jpg?a338252b4f314ea2ec46cc8a6c6acdf1"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/labirint-korabl" title="Лабиринт-корабль" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/dsc_0186.290x192w.jpg?a338252b4f314ea2ec46cc8a6c6acdf1"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item28" title="item28">
-							<div class="heading">
-								<span class="title"><a data-product="284" href="products/labirint-na-zakaz">Лабиринт на заказ</a></span>
-								<span class="price">
+							<!-- <li class="item28" title="item28"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="284" href="products/labirint-na-zakaz">Лабиринт на заказ</a></span> -->
+								<!-- <span class="price"> -->
 			
-									44 000 <span class="rouble">i</span>
+									<!-- 44 000 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/labirint-na-zakaz" title="Лабиринт на заказ" >
-								<img src="http://cartonpapa.com/files/products/dsc_0811.290x192w.jpg?9decbb06b4a18299fc36a6ed87becdb2"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/labirint-na-zakaz" title="Лабиринт на заказ" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/dsc_0811.290x192w.jpg?9decbb06b4a18299fc36a6ed87becdb2"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item15" title="item15">
-							<div class="heading">
-								<span class="title"><a data-product="56" href="products/bolshoj-dom-dlya-igrushek">Большой дом для игрушек</a></span>
-								<span class="price">
+							<!-- <li class="item15" title="item15"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="56" href="products/bolshoj-dom-dlya-igrushek">Большой дом для игрушек</a></span> -->
+								<!-- <span class="price"> -->
 			
-									5 830 <span class="rouble">i</span>
+									<!-- 5 830 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/bolshoj-dom-dlya-igrushek" title="Большой дом для игрушек" >
-								<img src="http://cartonpapa.com/files/products/DSC_0261-800x532.290x192w.jpg?d290c70e385df453e0ef5a9cfd5e7c57"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/bolshoj-dom-dlya-igrushek" title="Большой дом для игрушек" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/DSC_0261-800x532.290x192w.jpg?d290c70e385df453e0ef5a9cfd5e7c57"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item26" title="item26">
-							<div class="heading">
-								<span class="title"><a data-product="49" href="products/igrushki-iz-kartona">Игрушки из картона</a></span>
-								<span class="price">
+							<!-- <li class="item26" title="item26"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="49" href="products/igrushki-iz-kartona">Игрушки из картона</a></span> -->
+								<!-- <span class="price"> -->
 			
-									275 <span class="rouble">i</span>
+									<!-- 275 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/igrushki-iz-kartona" title="Игрушки из картона" >
-								<img src="http://cartonpapa.com/files/products/cardboard%20toys_01%20%282%29.290x192w.JPG?3645a4758e1ca61b77cf637343a7d605"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/igrushki-iz-kartona" title="Игрушки из картона" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/cardboard%20toys_01%20%282%29.290x192w.JPG?3645a4758e1ca61b77cf637343a7d605"  > -->
 																																																					
-							</a>
+							<!-- </a> -->
 														
-							<del class="old-price">350 <span class="rouble">i</span></del>													</li>
+							<!-- <del class="old-price">350 <span class="rouble">i</span></del>													</li> -->
 
 
 
 
 
-							<li class="item23" title="item23">
-							<div class="heading">
-								<span class="title"><a data-product="221" href="products/kartonnyj-tron-detskij">Картонный трон детский</a></span>
-								<span class="price">
+							<!-- <li class="item23" title="item23"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="221" href="products/kartonnyj-tron-detskij">Картонный трон детский</a></span> -->
+								<!-- <span class="price"> -->
 			
-									2 750 <span class="rouble">i</span>
+									<!-- 2 750 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/kartonnyj-tron-detskij" title="Картонный трон детский" >
-								<img src="http://cartonpapa.com/files/products/2016-04-08_15-47-52-2.290x192w.jpg?699e010226b197fa410385c9c222375f"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/kartonnyj-tron-detskij" title="Картонный трон детский" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/2016-04-08_15-47-52-2.290x192w.jpg?699e010226b197fa410385c9c222375f"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item16" title="item16">
-							<div class="heading">
-								<span class="title"><a data-product="213" href="products/olen-lesnoj">Олень (лесной)</a></span>
-								<span class="price">
+							<!-- <li class="item16" title="item16"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="213" href="products/olen-lesnoj">Олень (лесной)</a></span> -->
+								<!-- <span class="price"> -->
 			
-									55 <span class="rouble">i</span>
+									<!-- 55 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/olen-lesnoj" title="Олень (лесной)" >
-								<img src="http://cartonpapa.com/files/products/%20%D0%BB%D0%B5%D1%81%D0%BD%D0%BE%D0%B9_01.290x192w.JPG?8492ea37aeae82f4ab70046b0109b7b4"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/olen-lesnoj" title="Олень (лесной)" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/%20%D0%BB%D0%B5%D1%81%D0%BD%D0%BE%D0%B9_01.290x192w.JPG?8492ea37aeae82f4ab70046b0109b7b4"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item24" title="item24">
-							<div class="heading">
-								<span class="title"><a data-product="195" href="products/kartonnyj-kamin">Картонный камин</a></span>
-								<span class="price">
+							<!-- <li class="item24" title="item24"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="195" href="products/kartonnyj-kamin">Картонный камин</a></span> -->
+								<!-- <span class="price"> -->
 			
-									2 200 <span class="rouble">i</span>
+									<!-- 2 200 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/kartonnyj-kamin" title="Картонный камин" >
-								<img src="http://cartonpapa.com/files/products/2_2.290x192w.jpg?23deeb145d4bd94bcdbe281f26e8804f"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/kartonnyj-kamin" title="Картонный камин" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/2_2.290x192w.jpg?23deeb145d4bd94bcdbe281f26e8804f"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item24" title="item24">
-							<div class="heading">
-								<span class="title"><a data-product="57" href="products/novogodnyaya-elka">Новогодняя ёлка</a></span>
-								<span class="price">
+							<!-- <li class="item24" title="item24"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="57" href="products/novogodnyaya-elka">Новогодняя ёлка</a></span> -->
+								<!-- <span class="price"> -->
 			
-									550 <span class="rouble">i</span>
+									<!-- 550 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/novogodnyaya-elka" title="Новогодняя ёлка" >
-								<img src="http://cartonpapa.com/files/products/DSC_0315.290x192w.JPG?3f6b5fad25cee10d490c29aaa065f219"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/novogodnyaya-elka" title="Новогодняя ёлка" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/DSC_0315.290x192w.JPG?3f6b5fad25cee10d490c29aaa065f219"  > -->
 																																																					
-							</a>
+							<!-- </a> -->
 														
-							<del class="old-price">750 <span class="rouble">i</span></del>													</li>
+							<!-- <del class="old-price">750 <span class="rouble">i</span></del>													</li> -->
 
 
 
 
 
-							<li class="item24" title="item24">
-							<div class="heading">
-								<span class="title"><a data-product="201" href="products/elka-mariya">Ёлка &quot;Мария&quot;</a></span>
-								<span class="price">
+							<!-- <li class="item24" title="item24"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="201" href="products/elka-mariya">Ёлка &quot;Мария&quot;</a></span> -->
+								<!-- <span class="price"> -->
 			
-									2 200 <span class="rouble">i</span>
+									<!-- 2 200 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/elka-mariya" title="Ёлка &quot;Мария&quot;" >
-								<img src="http://cartonpapa.com/files/products/DSC00915.290x192w.JPG?cc8502c48f0be8c52929e8843498a2ce"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/elka-mariya" title="Ёлка &quot;Мария&quot;" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/DSC00915.290x192w.JPG?cc8502c48f0be8c52929e8843498a2ce"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item24" title="item24">
-							<div class="heading">
-								<span class="title"><a data-product="200" href="products/elka-anna">Ёлка &quot;Анна&quot;</a></span>
-								<span class="price">
+							<!-- <li class="item24" title="item24"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="200" href="products/elka-anna">Ёлка &quot;Анна&quot;</a></span> -->
+								<!-- <span class="price"> -->
 			
-									2 750 <span class="rouble">i</span>
+									<!-- 2 750 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/elka-anna" title="Ёлка &quot;Анна&quot;" >
-								<img src="http://cartonpapa.com/files/products/DSC00892.290x192w.JPG?41f3597dea657e3920f8e51340a08c64"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/elka-anna" title="Ёлка &quot;Анна&quot;" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/DSC00892.290x192w.JPG?41f3597dea657e3920f8e51340a08c64"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item24" title="item24">
-							<div class="heading">
-								<span class="title"><a data-product="202" href="products/elka-anyutka">Ёлка &quot;Анютка&quot;</a></span>
-								<span class="price">
+							<!-- <li class="item24" title="item24"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="202" href="products/elka-anyutka">Ёлка &quot;Анютка&quot;</a></span> -->
+								<!-- <span class="price"> -->
 			
-									1 320 <span class="rouble">i</span>
+									<!-- 1 320 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/elka-anyutka" title="Ёлка &quot;Анютка&quot;" >
-								<img src="http://cartonpapa.com/files/products/DSC00898.290x192w.JPG?3a11ffa6f91cb27f41777724406f9b8f"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/elka-anyutka" title="Ёлка &quot;Анютка&quot;" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/DSC00898.290x192w.JPG?3a11ffa6f91cb27f41777724406f9b8f"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item24" title="item24">
-							<div class="heading">
-								<span class="title"><a data-product="203" href="products/elka-marishka">Ёлка &quot;Маришка&quot;</a></span>
-								<span class="price">
+							<!-- <li class="item24" title="item24"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="203" href="products/elka-marishka">Ёлка &quot;Маришка&quot;</a></span> -->
+								<!-- <span class="price"> -->
 			
-									1 100 <span class="rouble">i</span>
+									<!-- 1 100 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/elka-marishka" title="Ёлка &quot;Маришка&quot;" >
-								<img src="http://cartonpapa.com/files/products/DSC00917.290x192w.JPG?0ee583f05cd7af9711a638df7ad3ff86"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/elka-marishka" title="Ёлка &quot;Маришка&quot;" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/DSC00917.290x192w.JPG?0ee583f05cd7af9711a638df7ad3ff86"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item12" title="item12">
-							<div class="heading">
-								<span class="title"><a data-product="158" href="products/fartuk-s-narukavnikami">Фартук с нарукавниками</a></span>
-								<span class="price">
+							<!-- <li class="item12" title="item12"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="158" href="products/fartuk-s-narukavnikami">Фартук с нарукавниками</a></span> -->
+								<!-- <span class="price"> -->
 			
-			 </span>
-							</div>
-														<a href="products/fartuk-s-narukavnikami" title="Фартук с нарукавниками" >
-								<img src="http://cartonpapa.com/files/products/fartukblue.1200x1200w.290x192w.jpg?f497020762cba423cab805577e8f25fe"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/fartuk-s-narukavnikami" title="Фартук с нарукавниками" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/fartukblue.1200x1200w.290x192w.jpg?f497020762cba423cab805577e8f25fe"  > -->
 								
-							</a>
-																				</li>
+							<!-- </a> -->
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item12" title="item12">
-							<div class="heading">
-								<span class="title"><a data-product="143" href="products/akril-12-tsvetov">Акрил (12 цветов)</a></span>
-								<span class="price">
+							<!-- <li class="item12" title="item12"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="143" href="products/akril-12-tsvetov">Акрил (12 цветов)</a></span> -->
+								<!-- <span class="price"> -->
 			
-									440 <span class="rouble">i</span>
+									<!-- 440 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/akril-12-tsvetov" title="Акрил (12 цветов)" >
-								<img src="http://cartonpapa.com/files/products/Untitled-1.290x192w.jpg?8b021b0e1acbec7a00561ea10f924b3d"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/akril-12-tsvetov" title="Акрил (12 цветов)" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/Untitled-1.290x192w.jpg?8b021b0e1acbec7a00561ea10f924b3d"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item12" title="item12">
-							<div class="heading">
-								<span class="title"><a data-product="145" href="products/guash-12-tsvetov">Гуашь (12 цветов)</a></span>
-								<span class="price">
+							<!-- <li class="item12" title="item12"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="145" href="products/guash-12-tsvetov">Гуашь (12 цветов)</a></span> -->
+								<!-- <span class="price"> -->
 			
-			 </span>
-							</div>
-														<a href="products/guash-12-tsvetov" title="Гуашь (12 цветов)" >
-								<img src="http://cartonpapa.com/files/products/scrn_big_1.290x192w.jpg?b35d95ff3397ffaca26991aee17ca82c"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/guash-12-tsvetov" title="Гуашь (12 цветов)" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/scrn_big_1.290x192w.jpg?b35d95ff3397ffaca26991aee17ca82c"  > -->
 								
-							</a>
-																				</li>
+							<!-- </a> -->
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item12" title="item12">
-							<div class="heading">
-								<span class="title"><a data-product="177" href="products/nabor-kistej-3-shtuki">Набор кистей (3 штуки)</a></span>
-								<span class="price">
+							<!-- <li class="item12" title="item12"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="177" href="products/nabor-kistej-3-shtuki">Набор кистей (3 штуки)</a></span> -->
+								<!-- <span class="price"> -->
 			
-									110 <span class="rouble">i</span>
+									<!-- 110 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/nabor-kistej-3-shtuki" title="Набор кистей (3 штуки)" >
-								<img src="http://cartonpapa.com/files/products/Untitled-1_4.290x192w.jpg?2c6facf83f83268dc93ba711c7da34c0"  >
-																										<img class="label" src="files/ticket-best.png" alt="" width="68">																	
-							</a>
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/nabor-kistej-3-shtuki" title="Набор кистей (3 штуки)" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/Untitled-1_4.290x192w.jpg?2c6facf83f83268dc93ba711c7da34c0"  > -->
+																										<!-- <img class="label" src="files/ticket-best.png" alt="" width="68">																	 -->
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item12" title="item12">
-							<div class="heading">
-								<span class="title"><a data-product="147" href="products/nabor-kistej-6-shtuk">Набор кистей (6 штук)</a></span>
-								<span class="price">
+							<!-- <li class="item12" title="item12"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="147" href="products/nabor-kistej-6-shtuk">Набор кистей (6 штук)</a></span> -->
+								<!-- <span class="price"> -->
 			
-									286 <span class="rouble">i</span>
+									<!-- 286 <span class="rouble">i</span> -->
 				
 			
-			 </span>
-							</div>
-														<a href="products/nabor-kistej-6-shtuk" title="Набор кистей (6 штук)" >
-								<img src="http://cartonpapa.com/files/products/Untitled-1_3.290x192w.jpg?f58abd35f8ac3f99f59d7882948d1c22"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/nabor-kistej-6-shtuk" title="Набор кистей (6 штук)" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/Untitled-1_3.290x192w.jpg?f58abd35f8ac3f99f59d7882948d1c22"  > -->
 																																											
-							</a>
+							<!-- </a> -->
 														
-																				</li>
+																				<!-- </li> -->
 
 
 
 
 
-							<li class="item15" title="item15">
-							<div class="heading">
-								<span class="title"><a data-product="55" href="products/ekostul-vzroslyj">Экостул (взрослый)</a></span>
-								<span class="price">
+							<!-- <li class="item15" title="item15"> -->
+							<!-- <div class="heading"> -->
+								<!-- <span class="title"><a data-product="55" href="products/ekostul-vzroslyj">Экостул (взрослый)</a></span> -->
+								<!-- <span class="price"> -->
 			
-			 </span>
-							</div>
-														<a href="products/ekostul-vzroslyj" title="Экостул (взрослый)" >
-								<img src="http://cartonpapa.com/files/products/Cardboard%20stool_1.290x192w.JPG?5d5a2df35bfcad761f8bac8bade74e81"  >
+			 <!-- </span> -->
+							<!-- </div> -->
+														<!-- <a href="products/ekostul-vzroslyj" title="Экостул (взрослый)" > -->
+								<!-- <img src="http://cartonpapa.com/files/products/Cardboard%20stool_1.290x192w.JPG?5d5a2df35bfcad761f8bac8bade74e81"  > -->
 								
-							</a>
-																				</li>
+							<!-- </a> -->
+																				<!-- </li> -->
 
 
 
 
 
 	
-					</ul>
+					<!-- </ul> -->
 
 
-			<div class="socials-block alt">
-						<h3>Понравилась игрушка? Поделись с друзьями!</h3>
-<!-- <ul class="social-list alt"> -->
-							<!-- <li><a class="lj" href="http://www.livejournal.com/update.bml?subject=Коля Резниченко лох&href=http://cartonpapa.com/&event=Волшебный склад сокровищ и интернет-магазин самых лучших картонных игрушек и декораций, которые папа Женя начал изобретать для дочки Иришки, а теперь придумывает их для всех детей во Вселенной! http://cartonpapa.com/products" target="_blank" title="livejournal">livejournal</a></li> -->
-							<!-- <li><a class="facebook"href="https://www.facebook.com/sharer/sharer.php?u=http://cartonpapa.com/products" target="_blank" >facebook</a></li> -->
-							<!-- <li><a class="vk" href="http://vkontakte.ru/share.php?url=http://cartonpapa.com/&title=Коля Резниченко лох" target="_blank"  title="vkontakte">vkontakte</a></li> -->
-							<!-- <li><a class="twitter" href="https://twitter.com/share?url=http://cartonpapa.com/&text=Волшебный склад сокровищ и интернет-магазин самых лучших картонных игрушек и декораций, которые папа Женя начал изобретать для дочки Иришки, а теперь придумывает их для всех детей во Вселенной!" target="_blank">twitter</a></li> -->
-							<!-- <li><a class="ok" href="http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st._surl=http://cartonpapa.com/&st.comments=Коля Резниченко лох&st.image=http://cartonpapa.com/sharing.jpg" title="odnoklassniki" target="_blank">odnoklassniki</a></li> -->
-							<!-- <li><a class="google" href="https://plus.google.com/share?url=http://cartonpapa.com/" title="google+" target="_blank">google+</a></li> -->
-						<!-- <!--	<li><a class="instagram" href="http://instagram.com/cardboard_dad" title="instagram" target="_blank">instagram</a></li>--> -->
-							<!-- <li><a class="pinterest" href="http://pinterest.com/pin/create/button/?url=http://cartonpapa.com/&media=http://cartonpapa.com/sharing.jpg&description=Волшебный склад сокровищ и интернет-магазин самых лучших картонных игрушек и декораций, которые папа Женя начал изобретать для дочки Иришки, а теперь придумывает их для всех детей во Вселенной!" title="pinterest" target="_blank">pinterest</a></li> -->
-							<!-- <li><a class="mail" href="mailto:shop@cartonpapa.com, 10@cartonpapa.com" title="mail">mail</a></li> -->
+			<!-- <div class="socials-block alt"> -->
+						<!-- <h3>Понравилась игрушка? Поделись с друзьями!</h3> -->
+<!-- <!-- <ul class="social-list alt"> --> -->
+							<!-- <!-- <li><a class="lj" href="http://www.livejournal.com/update.bml?subject=Коля Резниченко лох&href=http://cartonpapa.com/&event=Волшебный склад сокровищ и интернет-магазин самых лучших картонных игрушек и декораций, которые папа Женя начал изобретать для дочки Иришки, а теперь придумывает их для всех детей во Вселенной! http://cartonpapa.com/products" target="_blank" title="livejournal">livejournal</a></li> --> -->
+							<!-- <!-- <li><a class="facebook"href="https://www.facebook.com/sharer/sharer.php?u=http://cartonpapa.com/products" target="_blank" >facebook</a></li> --> -->
+							<!-- <!-- <li><a class="vk" href="http://vkontakte.ru/share.php?url=http://cartonpapa.com/&title=Коля Резниченко лох" target="_blank"  title="vkontakte">vkontakte</a></li> --> -->
+							<!-- <!-- <li><a class="twitter" href="https://twitter.com/share?url=http://cartonpapa.com/&text=Волшебный склад сокровищ и интернет-магазин самых лучших картонных игрушек и декораций, которые папа Женя начал изобретать для дочки Иришки, а теперь придумывает их для всех детей во Вселенной!" target="_blank">twitter</a></li> --> -->
+							<!-- <!-- <li><a class="ok" href="http://www.odnoklassniki.ru/dk?st.cmd=addShare&st.s=1&st._surl=http://cartonpapa.com/&st.comments=Коля Резниченко лох&st.image=http://cartonpapa.com/sharing.jpg" title="odnoklassniki" target="_blank">odnoklassniki</a></li> --> -->
+							<!-- <!-- <li><a class="google" href="https://plus.google.com/share?url=http://cartonpapa.com/" title="google+" target="_blank">google+</a></li> --> -->
+						<!-- <!-- <!--	<li><a class="instagram" href="http://instagram.com/cardboard_dad" title="instagram" target="_blank">instagram</a></li>--> --> -->
+							<!-- <!-- <li><a class="pinterest" href="http://pinterest.com/pin/create/button/?url=http://cartonpapa.com/&media=http://cartonpapa.com/sharing.jpg&description=Волшебный склад сокровищ и интернет-магазин самых лучших картонных игрушек и декораций, которые папа Женя начал изобретать для дочки Иришки, а теперь придумывает их для всех детей во Вселенной!" title="pinterest" target="_blank">pinterest</a></li> --> -->
+							<!-- <!-- <li><a class="mail" href="mailto:shop@cartonpapa.com, 10@cartonpapa.com" title="mail">mail</a></li> --> -->
+						<!-- <!-- </ul> --> -->
+					<!-- </div> -->
+<!-- </div> -->
+		<!-- </div> -->
+		<!-- <!-- Основная часть (The End) -->  -->
+		<!-- </div> -->
+	<!-- </div> -->
+	<!-- <footer id="footer"> -->
+		<!-- <div class="footer-holder"> -->
+			<!-- <a href="#question" class="btn-white open-lightbox">ЗАДАТЬ ВОПРОС</a> -->
+		<!-- </div> -->
+	<!-- </footer> -->
+	<!-- <div class="popup-holder" id="popups"> -->
+		<!-- <div class="lightbox" id="question"> -->
+			<!-- <h3>Задать вопрос Коляну Резниченко</h3> -->
+			<!-- <form action="#" id="send_q" class="form" method="POST" > -->
+				<!-- <fieldset> -->
+					<!-- <input type="text"  data-validetta="required" placeholder="Ваше имя" name="name"  title="Пожалуйста, используйте только буквы" > -->
+					<!-- <input type="text" placeholder="Е-мейл" name="email"  data-validetta="required,email"> -->
+					<!-- <input type="text" placeholder="89031234567" name="phone"  data-validetta="required,number,minLength[7],maxLength[12]" title="Пожалуйста, используйте только цифры, избегайте пробелов и других символов, таких как точки или запятые."> -->
+					<!-- <textarea cols="30" rows="10" placeholder="вопрос" name="text"  data-validetta="required"></textarea> -->
+					<!-- <input type="submit" class="btn-blue" id="send_q" name="send"  value="отправить"> -->
+				<!-- </fieldset> -->
+			<!-- </form> -->
+		<!-- </div> -->
+		<!-- <!--<div class="lightbox" id="order"> -->
+			<!-- <h3>Заказать товар «Ракета на Марс»</h3> -->
+			<!-- <form action="#" class="form"> -->
+				<!-- <fieldset> -->
+					<!-- <input type="text" placeholder="Ваше имя"> -->
+					<!-- <input type="email" placeholder="Е-мейл"> -->
+					<!-- <input type="text" placeholder="Телефон"> -->
+					<!-- <textarea cols="30" rows="10" placeholder="адрес" class="height1"></textarea> -->
+					<!-- <textarea cols="30" rows="10" placeholder="Комментарий" class="height2"></textarea> -->
+					<!-- <input type="submit" class="btn-blue open-lightbox" href="#thanks" value="отправить"> -->
+				<!-- </fieldset> -->
+			<!-- </form> -->
+		<!-- </div>--> -->
+		<!-- <div class="image-gallery" id="big-image"> -->
+			<!-- <ul class="slider"> -->
+				<!-- <li><img src="files/img02-big.jpg" alt="" width="800" height="532" ></li> -->
+				<!-- <li><img src="files/img02-big.jpg" alt="" width="800" height="532" ></li> -->
+			<!-- </ul> -->
+			<!-- <a href="#" class="btn-prev" title="Предыдущий">Предыдущий</a> -->
+			<!-- <a href="#" class="btn-next" title="Следующий">Следующий</a> -->
+		<!-- </div> -->
+		<!-- <div class="lightbox" id="thanks"> -->
+			<!-- <h3>Форма была отправлена</h3> -->
+			<!-- <p>Спасибо за Ваше обращение и заказ. Все данные по заказу были отправлены Вам на почту.</p> -->
+		<!-- </div> -->
+		
+		<!-- <div class="lightbox" id="thanks-review" style="text-align: center;"> -->
+			<!-- <h3 >Благодарим за добавление отзыва</h3> -->
+		<!-- </div> -->
+		
+		<!-- <div class="lightbox popup-product" id="product1"> -->
+			<!-- <div class="gallery-products"> -->
+				<!-- <ul class="slider"> -->
+					<!-- <li> -->
+						<!-- <img src="files/img08.jpg" alt="" width="460" height="692" > -->
+						<!-- <div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <img src="files/img08.jpg" alt="" width="460" height="692" > -->
+						<!-- <div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div> -->
+					<!-- </li> -->
+				<!-- </ul> -->
+				<!-- <div class="switcher"> -->
+					<!-- <h3>ДЕТСКИЕ ПЛОЩАДКИ</h3> -->
+					<!-- <ul> -->
+						<!-- <li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li> -->
+					<!-- </ul> -->
+					<!-- <ul> -->
+						<!-- <li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li> -->
+					<!-- </ul> -->
+				<!-- </div> -->
+			<!-- </div> -->
+		<!-- </div> -->
+		<!-- <div class="lightbox popup-product" id="product2"> -->
+			<!-- <div class="gallery-products"> -->
+				<!-- <ul class="slider"> -->
+					<!-- <li> -->
+						<!-- <img src="files/img08.jpg" alt="" width="460" height="692" > -->
+						<!-- <div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <img src="files/img08.jpg" alt="" width="460" height="692" > -->
+						<!-- <div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div> -->
+					<!-- </li> -->
+				<!-- </ul> -->
+				<!-- <div class="switcher"> -->
+					<!-- <h3>ДЕТСКИЕ ПЛОЩАДКИ</h3> -->
+					<!-- <ul> -->
+						<!-- <li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li> -->
+					<!-- </ul> -->
+					<!-- <ul> -->
+						<!-- <li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li> -->
+					<!-- </ul> -->
+				<!-- </div> -->
+			<!-- </div> -->
+		<!-- </div> -->
+		<!-- <div class="lightbox popup-product" id="product3"> -->
+			<!-- <div class="gallery-products"> -->
+				<!-- <ul class="slider"> -->
+					<!-- <li> -->
+						<!-- <img src="files/img08.jpg" alt="" width="460" height="692" > -->
+						<!-- <div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <img src="files/img08.jpg" alt="" width="460" height="692" > -->
+						<!-- <div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div> -->
+					<!-- </li> -->
+				<!-- </ul> -->
+				<!-- <div class="switcher"> -->
+					<!-- <h3>ДЕТСКИЕ ПЛОЩАДКИ</h3> -->
+					<!-- <ul> -->
+						<!-- <li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li> -->
+					<!-- </ul> -->
+					<!-- <ul> -->
+						<!-- <li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li> -->
+					<!-- </ul> -->
+				<!-- </div> -->
+			<!-- </div> -->
+		<!-- </div> -->
+		<!-- <div class="lightbox popup-product" id="product4"> -->
+			<!-- <div class="gallery-products"> -->
+				<!-- <ul class="slider"> -->
+					<!-- <li> -->
+						<!-- <img src="files/img08.jpg" alt="" width="460" height="692" > -->
+						<!-- <div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <img src="files/img08.jpg" alt="" width="460" height="692" > -->
+						<!-- <div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <img src="files/img08.jpg" alt="" width="460" height="692" > -->
+						<!-- <div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <img src="files/img08.jpg" alt="" width="460" height="692" > -->
+						<!-- <div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <img src="files/img08.jpg" alt="" width="460" height="692" > -->
+						<!-- <div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <img src="files/img08.jpg" alt="" width="460" height="692" > -->
+						<!-- <div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <img src="files/img08.jpg" alt="" width="460" height="692" > -->
+						<!-- <div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <img src="files/img08.jpg" alt="" width="460" height="692" > -->
+						<!-- <div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <img src="files/img08.jpg" alt="" width="460" height="692" > -->
+						<!-- <div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <img src="files/img08.jpg" alt="" width="460" height="692" > -->
+						<!-- <div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <img src="files/img08.jpg" alt="" width="460" height="692" > -->
+						<!-- <div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <img src="files/img08.jpg" alt="" width="460" height="692" > -->
+						<!-- <div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <img src="files/img08.jpg" alt="" width="460" height="692" > -->
+						<!-- <div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <img src="files/img08.jpg" alt="" width="460" height="692" > -->
+						<!-- <div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <img src="files/img08.jpg" alt="" width="460" height="692" > -->
+						<!-- <div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <img src="files/img08.jpg" alt="" width="460" height="692" > -->
+						<!-- <div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <img src="files/img08.jpg" alt="" width="460" height="692" > -->
+						<!-- <div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <img src="files/img08.jpg" alt="" width="460" height="692" > -->
+						<!-- <div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <img src="files/img08.jpg" alt="" width="460" height="692" > -->
+						<!-- <div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <img src="files/img08.jpg" alt="" width="460" height="692" > -->
+						<!-- <div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <img src="files/img08.jpg" alt="" width="460" height="692" > -->
+						<!-- <div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <img src="files/img08.jpg" alt="" width="460" height="692" > -->
+						<!-- <div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <img src="files/img08.jpg" alt="" width="460" height="692" > -->
+						<!-- <div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div> -->
+					<!-- </li> -->
+					<!-- <li> -->
+						<!-- <img src="files/img08.jpg" alt="" width="460" height="692" > -->
+						<!-- <div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div> -->
+					<!-- </li> -->
+				<!-- </ul> -->
+				<!-- <div class="switcher"> -->
+					<!-- <h3>ДЕТСКИЕ ПЛОЩАДКИ</h3> -->
+					<!-- <div class="scroll-pane"> -->
+						<!-- <ul> -->
+							<!-- <li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li> -->
+							<!-- <li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li> -->
+							<!-- <li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li> -->
+							<!-- <li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li> -->
+							<!-- <li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li> -->
+							<!-- <li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li> -->
+							<!-- <li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li> -->
+							<!-- <li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li> -->
+							<!-- <li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li> -->
+							<!-- <li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li> -->
+							<!-- <li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li> -->
+							<!-- <li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li> -->
 						<!-- </ul> -->
-					</div>
-</div>
-		</div>
-		<!-- Основная часть (The End) --> 
-		</div>
-	</div>
-	<footer id="footer">
-		<div class="footer-holder">
-			<a href="#question" class="btn-white open-lightbox">ЗАДАТЬ ВОПРОС</a>
-		</div>
-	</footer>
-	<div class="popup-holder" id="popups">
-		<div class="lightbox" id="question">
-			<h3>Задать вопрос Коляну Резниченко</h3>
-			<form action="#" id="send_q" class="form" method="POST" >
-				<fieldset>
-					<input type="text"  data-validetta="required" placeholder="Ваше имя" name="name"  title="Пожалуйста, используйте только буквы" >
-					<input type="text" placeholder="Е-мейл" name="email"  data-validetta="required,email">
-					<input type="text" placeholder="89031234567" name="phone"  data-validetta="required,number,minLength[7],maxLength[12]" title="Пожалуйста, используйте только цифры, избегайте пробелов и других символов, таких как точки или запятые.">
-					<textarea cols="30" rows="10" placeholder="вопрос" name="text"  data-validetta="required"></textarea>
-					<input type="submit" class="btn-blue" id="send_q" name="send"  value="отправить">
-				</fieldset>
-			</form>
-		</div>
-		<!--<div class="lightbox" id="order">
-			<h3>Заказать товар «Ракета на Марс»</h3>
-			<form action="#" class="form">
-				<fieldset>
-					<input type="text" placeholder="Ваше имя">
-					<input type="email" placeholder="Е-мейл">
-					<input type="text" placeholder="Телефон">
-					<textarea cols="30" rows="10" placeholder="адрес" class="height1"></textarea>
-					<textarea cols="30" rows="10" placeholder="Комментарий" class="height2"></textarea>
-					<input type="submit" class="btn-blue open-lightbox" href="#thanks" value="отправить">
-				</fieldset>
-			</form>
-		</div>-->
-		<div class="image-gallery" id="big-image">
-			<ul class="slider">
-				<li><img src="files/img02-big.jpg" alt="" width="800" height="532" ></li>
-				<li><img src="files/img02-big.jpg" alt="" width="800" height="532" ></li>
-			</ul>
-			<a href="#" class="btn-prev" title="Предыдущий">Предыдущий</a>
-			<a href="#" class="btn-next" title="Следующий">Следующий</a>
-		</div>
-		<div class="lightbox" id="thanks">
-			<h3>Форма была отправлена</h3>
-			<p>Спасибо за Ваше обращение и заказ. Все данные по заказу были отправлены Вам на почту.</p>
-		</div>
-		
-		<div class="lightbox" id="thanks-review" style="text-align: center;">
-			<h3 >Благодарим за добавление отзыва</h3>
-		</div>
-		
-		<div class="lightbox popup-product" id="product1">
-			<div class="gallery-products">
-				<ul class="slider">
-					<li>
-						<img src="files/img08.jpg" alt="" width="460" height="692" >
-						<div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div>
-					</li>
-					<li>
-						<img src="files/img08.jpg" alt="" width="460" height="692" >
-						<div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div>
-					</li>
-				</ul>
-				<div class="switcher">
-					<h3>ДЕТСКИЕ ПЛОЩАДКИ</h3>
-					<ul>
-						<li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li>
-					</ul>
-					<ul>
-						<li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="lightbox popup-product" id="product2">
-			<div class="gallery-products">
-				<ul class="slider">
-					<li>
-						<img src="files/img08.jpg" alt="" width="460" height="692" >
-						<div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div>
-					</li>
-					<li>
-						<img src="files/img08.jpg" alt="" width="460" height="692" >
-						<div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div>
-					</li>
-				</ul>
-				<div class="switcher">
-					<h3>ДЕТСКИЕ ПЛОЩАДКИ</h3>
-					<ul>
-						<li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li>
-					</ul>
-					<ul>
-						<li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="lightbox popup-product" id="product3">
-			<div class="gallery-products">
-				<ul class="slider">
-					<li>
-						<img src="files/img08.jpg" alt="" width="460" height="692" >
-						<div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div>
-					</li>
-					<li>
-						<img src="files/img08.jpg" alt="" width="460" height="692" >
-						<div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div>
-					</li>
-				</ul>
-				<div class="switcher">
-					<h3>ДЕТСКИЕ ПЛОЩАДКИ</h3>
-					<ul>
-						<li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li>
-					</ul>
-					<ul>
-						<li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li>
-					</ul>
-				</div>
-			</div>
-		</div>
-		<div class="lightbox popup-product" id="product4">
-			<div class="gallery-products">
-				<ul class="slider">
-					<li>
-						<img src="files/img08.jpg" alt="" width="460" height="692" >
-						<div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div>
-					</li>
-					<li>
-						<img src="files/img08.jpg" alt="" width="460" height="692" >
-						<div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div>
-					</li>
-					<li>
-						<img src="files/img08.jpg" alt="" width="460" height="692" >
-						<div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div>
-					</li>
-					<li>
-						<img src="files/img08.jpg" alt="" width="460" height="692" >
-						<div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div>
-					</li>
-					<li>
-						<img src="files/img08.jpg" alt="" width="460" height="692" >
-						<div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div>
-					</li>
-					<li>
-						<img src="files/img08.jpg" alt="" width="460" height="692" >
-						<div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div>
-					</li>
-					<li>
-						<img src="files/img08.jpg" alt="" width="460" height="692" >
-						<div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div>
-					</li>
-					<li>
-						<img src="files/img08.jpg" alt="" width="460" height="692" >
-						<div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div>
-					</li>
-					<li>
-						<img src="files/img08.jpg" alt="" width="460" height="692" >
-						<div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div>
-					</li>
-					<li>
-						<img src="files/img08.jpg" alt="" width="460" height="692" >
-						<div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div>
-					</li>
-					<li>
-						<img src="files/img08.jpg" alt="" width="460" height="692" >
-						<div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div>
-					</li>
-					<li>
-						<img src="files/img08.jpg" alt="" width="460" height="692" >
-						<div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div>
-					</li>
-					<li>
-						<img src="files/img08.jpg" alt="" width="460" height="692" >
-						<div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div>
-					</li>
-					<li>
-						<img src="files/img08.jpg" alt="" width="460" height="692" >
-						<div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div>
-					</li>
-					<li>
-						<img src="files/img08.jpg" alt="" width="460" height="692" >
-						<div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div>
-					</li>
-					<li>
-						<img src="files/img08.jpg" alt="" width="460" height="692" >
-						<div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div>
-					</li>
-					<li>
-						<img src="files/img08.jpg" alt="" width="460" height="692" >
-						<div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div>
-					</li>
-					<li>
-						<img src="files/img08.jpg" alt="" width="460" height="692" >
-						<div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div>
-					</li>
-					<li>
-						<img src="files/img08.jpg" alt="" width="460" height="692" >
-						<div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div>
-					</li>
-					<li>
-						<img src="files/img08.jpg" alt="" width="460" height="692" >
-						<div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div>
-					</li>
-					<li>
-						<img src="files/img08.jpg" alt="" width="460" height="692" >
-						<div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div>
-					</li>
-					<li>
-						<img src="files/img08.jpg" alt="" width="460" height="692" >
-						<div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div>
-					</li>
-					<li>
-						<img src="files/img08.jpg" alt="" width="460" height="692" >
-						<div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div>
-					</li>
-					<li>
-						<img src="files/img08.jpg" alt="" width="460" height="692" >
-						<div class="description">Детская игровая площадка с замком. Размеры 4000 х 800 х 1000 см</div>
-					</li>
-				</ul>
-				<div class="switcher">
-					<h3>ДЕТСКИЕ ПЛОЩАДКИ</h3>
-					<div class="scroll-pane">
-						<ul>
-							<li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li>
-							<li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li>
-							<li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li>
-							<li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li>
-							<li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li>
-							<li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li>
-							<li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li>
-							<li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li>
-							<li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li>
-							<li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li>
-							<li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li>
-							<li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li>
-						</ul>
-						<ul>
-							<li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li>
-							<li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li>
-							<li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li>
-							<li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li>
-							<li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li>
-							<li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li>
-							<li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li>
-							<li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li>
-							<li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li>
-							<li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li>
-							<li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li>
-							<li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-	</div>
+						<!-- <ul> -->
+							<!-- <li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li> -->
+							<!-- <li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li> -->
+							<!-- <li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li> -->
+							<!-- <li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li> -->
+							<!-- <li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li> -->
+							<!-- <li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li> -->
+							<!-- <li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li> -->
+							<!-- <li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li> -->
+							<!-- <li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li> -->
+							<!-- <li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li> -->
+							<!-- <li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li> -->
+							<!-- <li><a href="#"><img src="files/thumb01.jpg" alt="" width="77" height="68" ></a></li> -->
+						<!-- </ul> -->
+					<!-- </div> -->
+				<!-- </div> -->
+			<!-- </div> -->
+		<!-- </div> -->
+	<!-- </div> -->
 
-	<script>
-$(document).ready(function(){
-    $('#send_q').validetta({
-        realTime : true,
-		display      : 'bubble',
-		ajax : {
-	        call        : true,         /* If you want make an ajax request set it true */
-	        type        : 'POST',        /* Ajax type. Default value is "GET" */
-	        url         : 'send.php',         /* Ajax url. You don’t need to write again here, if you wrote address which your form will be posted.  Plugin gets url information from action attribute. */
-	        data    : jQuery( "#send_q" ).serialize(),       /* Ajax dataType. Default value is "html" */
-	        beforeSend  : function(){}, /* Ajax beforeSend function */
-	        success     : function(object,data){
-				jQuery("#question h3").remove();
-				jQuery("#send_q").replaceWith(data);
-			}, /* Ajax success function */
-	        fail        : function(){}, /* Ajax error function */
-       		 complete    : function(){}  /* Ajax complete function */
-   		 }
-    });  
-});
-</script>
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+	<!-- <script> -->
+<!-- $(document).ready(function(){ -->
+    <!-- $('#send_q').validetta({ -->
+        <!-- realTime : true, -->
+		<!-- display      : 'bubble', -->
+		<!-- ajax : { -->
+	        <!-- call        : true,         /* If you want make an ajax request set it true */ -->
+	        <!-- type        : 'POST',        /* Ajax type. Default value is "GET" */ -->
+	        <!-- url         : 'send.php',         /* Ajax url. You don’t need to write again here, if you wrote address which your form will be posted.  Plugin gets url information from action attribute. */ -->
+	        <!-- data    : jQuery( "#send_q" ).serialize(),       /* Ajax dataType. Default value is "html" */ -->
+	        <!-- beforeSend  : function(){}, /* Ajax beforeSend function */ -->
+	        <!-- success     : function(object,data){ -->
+				<!-- jQuery("#question h3").remove(); -->
+				<!-- jQuery("#send_q").replaceWith(data); -->
+			<!-- }, /* Ajax success function */ -->
+	        <!-- fail        : function(){}, /* Ajax error function */ -->
+       		 <!-- complete    : function(){}  /* Ajax complete function */ -->
+   		 <!-- } -->
+    <!-- });   -->
+<!-- }); -->
+<!-- </script> -->
+<!-- <script> -->
+  <!-- (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){ -->
+  <!-- (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o), -->
+  <!-- m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m) -->
+  <!-- })(window,document,'script','//www.google-analytics.com/analytics.js','ga'); -->
 
-  ga('create', 'UA-53360006-1', 'auto');
-  ga('send', 'pageview');
+  <!-- ga('create', 'UA-53360006-1', 'auto'); -->
+  <!-- ga('send', 'pageview'); -->
 
-</script>
+<!-- </script> -->
 		
+<!-- </body> -->
+<!-- </html>		 -->
+	<!-- <!-- -->
+<!-- memory peak usage: 2376744 bytes -->
+<!-- page generation time: 0.035533905029297 seconds -->
+<!-- --> -->
+
+<!DOCTYPE html>
+<html>
+<body>
+<h1>Hello World</h1>
+<p>I'm hosted with GitHub Pages.</p>
 </body>
-</html>		
-	<!--
-memory peak usage: 2376744 bytes
-page generation time: 0.035533905029297 seconds
--->
+</html>
